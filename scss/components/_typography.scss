@@ -40,11 +40,13 @@ h4 {
 h5 {
   font-family: $font-tisa;
   font-size: rem-calc(14px);
+  letter-spacing: rem-calc(2px);
 }
 
 p {
   color: $grey;
   font-family: $font-tisa;
+  line-height: 1.85rem;
 }
 
 a {

@@ -1,1 +1,47 @@
-
+.icon {
+  margin: 0 auto;
+  &.medium-grey-div {
+    @include icons-sprite('medium-grey-div');
+    @include resize-sprite($icons-sprites, 'medium-grey-div', 50);
+  }
+  &.medium-white-div {
+    @include icons-sprite(medium-white-div);
+    @include resize-sprite($icons-sprites, medium-white-div, 50);
+  }
+  &.long-white-div {
+    @include icons-sprite(long-white-div);
+    @include resize-sprite($icons-sprites, long-white-div, 50);
+  }
+  &.present {
+    @include icons-sprite(icon-gifts);
+    @include resize-sprite($icons-sprites, icon-gifts, 50);
+  }
+  &.kids {
+    @include icons-sprite(icon-kids);
+    @include resize-sprite($icons-sprites, icon-kids, 50);
+  }
+  &.directions {
+    @include icons-sprite(icon-directions);
+    @include resize-sprite($icons-sprites, icon-directions, 50);
+  }
+  &.parking {
+    @include icons-sprite(icon-parking);
+    @include resize-sprite($icons-sprites, icon-parking, 50);
+  }
+  &.insta {
+    @include icons-sprite(icon-insta);
+    @include resize-sprite($icons-sprites, icon-insta, 50);
+  }
+  &.twitter {
+    @include icons-sprite(icon-twitter);
+    @include resize-sprite($icons-sprites, icon-twitter, 50);
+  }
+  &.mail {
+    @include icons-sprite(icon-mail);
+    @include resize-sprite($icons-sprites, icon-mail, 50);
+  }
+  &.menu {
+    @include icons-sprite(icon-menu);
+    @include resize-sprite($icons-sprites, icon-menu, 50);
+  }
+}
