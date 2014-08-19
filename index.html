@@ -6,16 +6,244 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Caroline & Arvin are getting married in Toronto!</title>
     <link rel="stylesheet" href="stylesheets/app.css" />
+    <link rel="stylesheet" href="bower_components/flexslider/flexslider.css" />
     <script src="bower_components/modernizr/modernizr.js"></script>
   </head>
   <body>
 
     <!-- Loading container div -->
     <div class="loading"></div>
+    <!-- Cat popout overlay container div -->
+    <div class="cat-overlay"></div>
+
+    <div class="main-container">
+
+      <!-- Intro content -->
+      <div id="intro" class="row">
+        <div class="small-12 medium-12 large-12 column">
+          <img class="row-image" data-interchange="[images/bg-intro2-mobile.jpg, (default)], [images/bg-intro2-tablet.jpg, (medium)], [images/bg-intro2-desktop.jpg, (large)]">
+          <div class="row-content with-background text-center">
+            <h1 class="white intro-title">Arvin Singla & Caroline Habib</h1>
+            <h3 class="white subtitle date show-for-medium-up">are getting married december 28th, 2014 in Toronto</h3>
+            <h4 class="white date show-for-small-only">On September 27, 2014<br/>in San Antonio, TX</h4>
+            <a href="#" class="button wide button-modal secondary" data-modal="rsvp"><span>Go ahead and RSVP here!</span><span>We promise you an awesome time!</span></a>
+          </div>
+        </div>
+      </div>
+      <!-- /Intro content -->
+
+      <div class="tip-container tip-right">
+        <div class="tooltip">Caroline messaged Arvin on OKCupid on Dec 30th, 2012. She was impressed by his love of The Little Mermaid.</div>
+        <div class="cat icons-pusheen-left"></div>
+      </div>
+
+      <!-- Events content -->
+      <div id="events" class="row">
+        <div class="small-12 medium-12 large-12 column">
+          <div class="row-content text-center">
+            <h2 class="mint">Events of the day</h1>
+            <div id="timeline">
+
+              <div class="event">
+                <h4 class="charcoal time">5:00pm</h4>
+                <div class="timeline-circle"></div>
+                <h4 class="red">Doors open at the spoke club</h4>
+                <h5>600 King St. W</h5>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <div class="actions">
+                  <a href="#" class="car red">Here's where you can park</a>
+                  <a href="#" class="marker red">Get directions to the venue</a>
+                </div>
+              </div>
+
+              <div class="event">
+                <h4 class="charcoal time">5:00pm</h4>
+                <div class="timeline-circle"></div>
+                <h4 class="red">Doors open at the spoke club</h4>
+                <h5>600 King St. W</h5>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <div class="actions">
+                  <a href="#" class="car">Here's where you can park</a>
+                  <a href="#" class="marker">Get directions to the venue</a>
+                </div>
+              </div>
+
+              <div class="event">
+                <h4 class="charcoal time">5:00pm</h4>
+                <div class="timeline-circle"></div>
+                <h4 class="red">Doors open at the spoke club</h4>
+                <h5>600 King St. W</h5>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <div class="actions">
+                  <a href="#" class="car">Here's where you can park</a>
+                  <a href="#" class="marker">Get directions to the venue</a>
+                </div>
+              </div>
+
+              <div class="event last">
+                <h4 class="charcoal time">5:00pm</h4>
+                <div class="timeline-circle"></div>
+                <h4 class="red">Doors open at the spoke club</h4>
+                <h5>600 King St. W</h5>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <div class="actions">
+                  <a href="#" class="car">Here's where you can park</a>
+                  <a href="#" class="marker">Get directions to the venue</a>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- / Events content -->
+
+      <div class="tip-container tip-left">
+        <div class="tooltip">Caroline & Arvin often joke about throwing her cat Paxil "dans la poubelle"</div>
+        <div class="cat icons-pusheen-right"></div>
+      </div>
+
+      <!-- Acommodations content -->
+      <div id="acommodations" class="row">
+        <!-- Hotel -->
+        <div class="small-12 medium-7 large-7 column">
+          <img class="row-image" data-interchange="[images/bg-accomodations-mobile.jpg, (default)], [images/bg-accomodations-tablet.jpg, (medium)], [images/bg-accomodations-desktop.jpg, (large)]">
+          <div class="row-content with-background text-center">
+            <h2 class="gold">Hyatt Regency Toronto</h2>
+            <h4 class="white">370 King St. W - <tel>(416) 343-1234</tel></h4>
+            <h5 class="white">$129/Night - 9min Walk to Ceremony</h5>
+            <p class="white">The Hyatt Regency lies in the heart of downtown Toronto and is walking<br/> distance to the ceremony/reception! Try to book by October 15th, 2014 using link below.</p>
+            <p class="white">Parking is avialable at the hotel, or at a number of lots in the area.</p>
+            <a href="#" class="button button-modal"><span>Book this Hotel!</span><span>la la la</span></a>
+            <a href="#" class="button button-modal secondary"><span>Get Directions</span><span>la la la</span></a>
+          </div>
+        </div>
+        <!-- Airbnb -->
+        <div class="small-12 medium-5 large-5 column">
+          <img class="row-image" data-interchange="[images/bg-accomodations2-mobile.jpg, (default)], [images/bg-accomodations2-tablet.jpg, (medium)], [images/bg-accomodations2-desktop.jpg, (large)]">
+          <div class="row-content with-background text-center">
+            Airbnb content goes here.
+          </div>
+        </div>
+      </div>
+      <!-- /Acommodations content -->
+
+      <div class="tip-container tip-right">
+        <div class="tooltip">Caroline and Arvin rate dogs they see on the street from 1-10. No dog has ever scored a 10.</div>
+        <div class="cat icons-pusheen-left"></div>
+      </div>
+
+      <!-- Wondering content -->
+      <div id="wondering" class="row">
+        <div class="small-12 medium-12 large-12 column">
+          <div class="row-content text-center">
+            <h2 class="mint">Things you may be wondering</h1>
+            <div class="wondering-item">
+              <div class="icon-big present"></div>
+              <h3 class="gold-dark">What about the gifts?</h3>
+              <p>Living the Toronto condo life we cultivate a minimalist lifestyle. We thought about registering but couldn't come up with anything we really needed or wanted. Your presence is our gift, but were you so generous to get us something we would kindly ask please no boxed gifts.</p>
+            </div>
+            <div class="wondering-item">
+              <div class="icon-big present"></div>
+              <h3 class="gold-dark">What about the kids?</h3>
+              <p>Living the Toronto condo life we cultivate a minimalist lifestyle. We thought about registering but couldn't come up with anything we really needed or wanted. Your presence is our gift, but were you so generous to get us something we would kindly ask please no boxed gifts.</p>
+            </div>
+            <div class="wondering-item">
+              <div class="icon-big present"></div>
+              <h3 class="gold-dark">What about the gifts?</h3>
+              <p>Living the Toronto condo life we cultivate a minimalist lifestyle. We thought about registering but couldn't come up with anything we really needed or wanted. Your presence is our gift, but were you so generous to get us something we would kindly ask please no boxed gifts.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- /Wondering content -->
+
+      <div class="tip-container tip-left">
+        <div class="tooltip">Arvin gets Caroline flowers every time she comes back from a trip. A tradition that started when she broke her arms.</div>
+        <div class="cat icons-pusheen-right"></div>
+      </div>
+
+      <!-- Thingstodo content -->
+      <div id="thingstodo" class="row">
+        <div class="small-12 medium-12 large-12 column">
+          <div class="flexslider">
+            <ul class="slides">
+              <li class="slide-queen">
+                <img class="row-image" data-interchange="[images/bg-slide1-mobile.jpg, (default)], [images/bg-slide1-tablet.jpg, (medium)], [images/bg-slide1-desktop.jpg, (large)]">
+                <div class="slide-wrapper">
+                  <h5 class="white">Things to do while in Toronto</h5>
+                  <h2 class="gold">#1 Shopping on the most awesome Queen Street</h2>
+                  <p class="white">Living the Toronto condo life we cultivate a minimalist lifestyle. We thought about registering but couldn't come up with anything we really needed or wanted. Your presence is our gift, but were you so generous to get us something we would kindly ask please no boxed gifts.</p>
+                </div>
+              </li>
+              <li class="slide-cntower">
+                <img class="row-image" data-interchange="[images/bg-slide1-mobile.jpg, (default)], [images/bg-slide1-tablet.jpg, (medium)], [images/bg-slide1-desktop.jpg, (large)]">
+                <div class="slide-wrapper">
+                  <h5 class="white">Things to do while in Toronto</h5>
+                  <h2 class="gold">#1 Shopping on the most awesome Queen Street</h2>
+                  <p class="white">Living the Toronto condo life we cultivate a minimalist lifestyle. We thought about registering but couldn't come up with anything we really needed or wanted. Your presence is our gift, but were you so generous to get us something we would kindly ask please no boxed gifts.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- /Thingstodo content -->
+
+      <div class="tip-container tip-right">
+        <div class="tooltip">Caroline has more photos of random animals on her phone than she does of Arvin</div>
+        <div class="cat icons-pusheen-left"></div>
+      </div>
+
+      <!-- contact content -->
+      <div id="contact" class="row">
+        <div class="small-12 medium-12 large-12 column">
+          <div class="row-content text-center">
+            <h2 class="mint">Contact Us</h1>
+            <div class="contact-item">
+              <div class="icon-small mail"></div>
+              <h3 class="gold-dark">Email us at rsvp@singlahabib.com</h3>
+            </div>
+            <div class="contact-item">
+              <div class="icon-small twitter"></div>
+              <h3 class="gold-dark">Tweet us at #singlahabib</h3>
+            </div>
+            <div class="contact-item">
+              <div class="icon-small instagram"></div>
+              <h3 class="gold-dark">Snap pics and tag us at #singlahabib</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- /contact content -->
+
+      <div class="tip-container tip-left">
+        <div class="tooltip">Arvin held an intervention for Caroline's crippiling plastic bag addiction. Progress is slow but ongoing.</div>
+        <div class="cat icons-pusheen-right"></div>
+      </div>
+
+      <!-- Outro content -->
+      <div id="outro" class="row">
+        <div class="small-12 medium-12 large-12 column">
+          <img class="row-image" data-interchange="[images/bg-outro-mobile.jpg, (default)], [images/bg-outro-tablet.jpg, (medium)], [images/bg-outro-desktop.jpg, (large)]">
+          <div class="row-content with-background text-center">
+            <h2 class="white">We hope to see you there!</h2>
+          </div>
+        </div>
+      </div>
+      <!-- /Outro content -->
+
+    </div> <!-- /main-container -->
 
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
     <script src="bower_components/foundation/js/foundation.min.js"></script>
+    <script src="bower_components/jquery-waypoints/waypoints.min.js"></script>
+    <script src="bower_components/fastclick/lib/fastclick.js"></script>
+    <script src="bower_components/flexslider/jquery.flexslider-min.js"></script>
+    <script src="js/jquery.arctext.js"></script>
     <script src="js/app.js"></script>
+    <script type="text/javascript" src="//use.typekit.net/nhd4jiy.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

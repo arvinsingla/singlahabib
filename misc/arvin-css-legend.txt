@@ -1,0 +1,136 @@
+CONTENT COLOURS
+
+#FFFFFF - White (content over imagery)
+#666666 - Grey (body copy)
+#333333 - Charcoal (inactive nav item, timeline)
+#a9c8b6 - Mint green (H2, Tertiary button, active nav item, image overlay)
+#DE9E92 - Cherry Pastel (Primary button, secondary button text, sub headers)
+#fdf0df - Light Gold (H2 over imagery)
+
+
+BACKGROUND COLOURS
+
+#FFFFFF - White
+
+
+————————————
+
+CONTENT
+
+p
+
+Font: Tisa Sans Pro Regular
+Style: Regular
+Size: 16px
+Colour: #666666
+
+
+
+
+h1 (main image intro / outro)
+
+Font: A DAY WITHOUT SUN
+Size: 125px
+Colour: #FFFFFF (white)
+Colour: #99383f (red)
+
+
+
+
+
+h2 (each section header)
+
+Font: A DAY WITHOUT SUN
+Size: 75px
+Colour: #a9c8b6 (mint green)
+Colour: #fdf0df (light gold)
+
+
+
+
+h3 (things you may be wondering sub headers + intro sub header, contact links)
+
+Font: Tisa Sans Pro Bold
+Style: Bold (bold + italic for under arvin singla & caroline habib)
+Size: 24px
+Colour: #ebcea6 - Gold
+Colour: #ffffff - White
+
+
+
+
+h4 (timeline titles, things to do title)
+
+Font: Tisa Sans Pro Bold
+Size: 16px
+Colour: #99383f
+Text-transform: uppercase
+
+
+
+
+h5 (Button text, timeline locations,  
+
+Font: Tisa Sans Pro Bold
+Size: 14px
+Colour: #99383f - Red
+Colour: #ffffff - White
+Text-transform: uppercase
+
+
+
+
+
+————————————
+
+UI ELEMENTS / NOT BUILT OUT STUFF
+
+
+Primary Button (inactive)
+height: 45px
+color #99383f
+30px border radius
+<h5> text
+text color: #FFFFFF
+
+Primary Button (active)
+height: 45px
+color #de9e92
+30px border radius
+<h5> text
+text color: #FFFFFF
+
+-
+
+Secondary Button (inactive)
+height: 45px
+color: #ffffff
+30px border radius
+<h5> text
+text color: #99383f
+
+Secondary Button (active)
+height: 45px
+color #de9e92
+30px border radius
+<h5> text
+text color: #FFFFFF
+
+-
+
+Tertiary Button (inactive)
+height: 45px
+color #a9c8b6
+30px border radius
+<h5> text
+text color: #FFFFFF
+
+Tertiary Button (active)
+height: 45px
+color #96b3a2
+30px border radius
+<h5> text
+text color: #FFFFFF
+
+-
+

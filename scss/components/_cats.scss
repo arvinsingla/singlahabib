@@ -1,0 +1,93 @@
+/** Cat tooltips **/
+
+
+.tip-container {
+  position: relative;
+  z-index: 999;
+  .cat {
+    display: block;
+    position: absolute;
+    width: rem-calc(164px);
+    height: rem-calc(140px);
+    @include single-transition(all, 0.3s, false, false);
+    @include translate3d(0,0,0);
+    @include backface-visibility(hidden);
+    @include perspective(1000);
+    cursor: pointer;
+  }
+  .tooltip {
+    max-width: rem-calc(280px);
+    position: absolute;
+    background: rgba(0,0,0, 0.8);
+    color: #fff;
+    padding: rem-calc(10px);
+    @include border-radius(rem-calc(10px));
+    opacity: 0;
+    @include single-transition(all, 0.3s, false, false);
+    @include transition-delay(0s);
+    top: rem-calc(-150px);
+    &:after {
+      top: 100%;
+      left: 85%;
+      border: solid transparent;
+      content: " ";
+      height: 0;
+      width: 0;
+      position: absolute;
+      pointer-events: none;
+      border-color: rgba(0, 0, 0, 0);
+      border-top-color: rgba(0,0,0, 0.8);
+      border-width: 10px;
+      margin-left: -10px;
+    }
+  }
+  &.tip-right {
+    .cat {
+      right: rem-calc(-163px);
+      background: url('../images/pusheen-left.png') no-repeat top left;
+    }
+    .tooltip {
+      right: rem-calc(20px);
+    }
+    &.peek {
+      .cat {
+        @include translate3d(rem-calc(-40px),0,0);
+      }
+    }
+    &.expand {
+      .cat {
+        @include transform(rotate(60deg) translate3d(rem-calc(-70px),rem-calc(70px),0));
+      }
+      .tooltip {
+        opacity: 1;
+        @include transition-delay(0.3s);
+      }
+    }
+  }
+  &.tip-left {
+    .cat {
+      background: url('../images/pusheen-right.png') no-repeat top left;
+      left: rem-calc(-163px);
+    }
+    .tooltip {
+      left: rem-calc(20px);
+      &:after {
+        left: 15%;
+      }
+    }
+    &.peek {
+      .cat {
+        @include translate3d(rem-calc(40px),0,0);
+      }
+    }
+    &.expand {
+      .cat {
+        @include transform(rotate(-60deg) translate3d(rem-calc(70px),rem-calc(70px),0));
+      }
+      .tooltip {
+        opacity: 1;
+        @include transition-delay(0.3s);
+      }
+    }
+  }
+}

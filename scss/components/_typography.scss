@@ -1,0 +1,60 @@
+/**
+ * Typography
+ */
+
+.white { color: $white; }
+.red { color: $red; }
+.cherry { color: $cherry; }
+.mint { color: $mint; }
+.gold { color: $gold; }
+.gold-dark { color: $gold-dark; }
+.grey { color: $grey; }
+.charcoal { color: $charcoal; }
+
+@font-face {
+  font-family: $font-sun;
+  src: url(../fonts/A_DAY_WITHOUT_SUN.otf);
+}
+
+h1 {
+  font-size: rem-calc(125px);
+  font-family: $font-sun;
+  text-transform: uppercase;
+  font-weight: lighter;
+}
+h2 {
+  font-family: $font-sun;
+  font-size: rem-calc(90px);
+  text-transform: uppercase;
+  font-weight: lighter;
+}
+h3 {
+  font-family: $font-tisa;
+  font-size: rem-calc(24px);
+  font-weight: 400;
+}
+h4 {
+  font-family: $font-tisa;
+  font-size: rem-calc(16px);
+}
+h5 {
+  font-family: $font-tisa;
+  font-size: rem-calc(14px);
+}
+
+p {
+  color: $grey;
+  font-family: $font-tisa;
+}
+
+a {
+  &:link {
+    font-size: rem-calc(13px);
+    font-weight: bold;
+    text-decoration: none;
+    font-family: $font-tisa;
+    border-bottom: 1px solid $red;
+    line-height: rem-calc(16px);
+    display: inline-block;
+  }
+}

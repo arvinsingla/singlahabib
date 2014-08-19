@@ -33,10 +33,28 @@ $include-html-global-classes: $include-html-classes;
 // $include-html-grid-classes: $include-html-classes;
 // $include-xl-html-grid-classes: false;
 
-// $row-width: rem-calc(1000);
+$row-width: 100%;
 // $total-columns: 12;
 
 // Global
+
+// Colours
+$white: #FFFFFF; // White (content over imagery)
+$grey: #666666; // Grey (body copy)
+$charcoal: #333333; // Charcoal (inactive nav item, timeline)
+$mint: #a9c8b6; // Mint green (H2, Tertiary button, active nav item, image overlay)
+$green: #96b3a2;
+$red: #99383f;
+$cherry: #DE9E92; // Cherry Pastel (Primary button, secondary button text, sub headers)
+$gold: #fdf0df; //Light Gold (H2 over imagery)
+$gold-dark: #ebcea6;
+
+// Fonts
+$font-tisa: "ff-tisa-sans-web-pro";
+$font-sun: "A day without sun";
+
+// Buttons
+$button-radius: rem-calc(35px);
 
 // We use these to define default font weights
 // $font-weight-normal: normal !default;
@@ -75,7 +93,7 @@ $primary-color: #008CBA;
 // $shiny-edge-color: rgba(#fff, .5);
 // $shiny-edge-active-color: rgba(#000, .2);
 
-// $column-gutter: rem-calc(30);
+$column-gutter: rem-calc(0);
 
 // Media Query Ranges
 // $small-range: (0em, 40em);

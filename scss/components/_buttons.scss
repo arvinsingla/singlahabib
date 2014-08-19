@@ -1,0 +1,74 @@
+// Buttons
+
+.button {
+  padding: 1rem 0;
+  color: $white;
+  min-width: rem-calc(250px);
+  background: $red;
+  border-color: $red;
+  overflow: hidden;
+  text-transform: uppercase;
+  font-family: $font-tisa;
+  font-size: rem-calc(14px);
+  font-weight: normal;
+  letter-spacing: rem-calc(2px);
+  @include user-select(none);
+  @include border-radius($button-radius);
+  &:hover {
+    background: $cherry;
+    border-color: $cherry;
+    span {
+      color: $cherry;
+    }
+    span + span {
+      top: 16px;
+      color: $white;
+      opacity: 1;
+    }
+  }
+  &.wide {
+    width: rem-calc(290px);
+  }
+  // Secondary Button Style
+  &.secondary {
+    background: $white;
+    color: $red;
+    border-color: $white;
+    &:hover {
+      background: $cherry;
+      color: $red;
+      border-color: $cherry;
+    }
+  }
+  // Tertiary Button Style
+  &.tertiary {
+    background: $mint;
+    color: $white;
+    border-color: $mint;
+    &:hover {
+      background: $green;
+      color: $white;
+      border-color: $green;
+    }
+  }
+  // Add the transition for the spans.
+  span {
+    @include single-transition(all, 0.5s, false, false);
+  }
+  // Move the second span out of the way.
+  > span + span {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100%;
+    opacity: 0;
+  }
+}
+
+@media #{$medium-up} {
+  .button {
+    &.wide {
+      width: rem-calc(360px);
+    }
+  }
+}
