@@ -36,6 +36,7 @@ h3 {
 h4 {
   font-family: $font-tisa;
   font-size: rem-calc(16px);
+  letter-spacing: rem-calc(2px);
 }
 h5 {
   font-family: $font-tisa;
@@ -55,8 +56,14 @@ a {
     font-weight: bold;
     text-decoration: none;
     font-family: $font-tisa;
-    border-bottom: 1px solid $red;
     line-height: rem-calc(16px);
     display: inline-block;
+  }
+}
+
+
+@media #{$small-only} {
+  h2 {
+    font-size: rem-calc(60px);
   }
 }

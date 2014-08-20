@@ -16,6 +16,29 @@
     <!-- Cat popout overlay container div -->
     <div class="cat-overlay"></div>
 
+    <div class="fixed top-bar-container">
+      <nav class="top-bar" data-topbar>
+        <ul class="title-area">
+          <li class="name">
+            <div class="icon logo-desktop"></div>
+          </li>
+           <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+          <li class="toggle-topbar"><a href="#"><span>Menu</span></a></li>
+        </ul>
+
+        <section class="top-bar-section">
+          <!-- Right Nav Section -->
+          <ul class="right">
+            <li><a href="#events">Events of the Day</a></li>
+            <li><a href="#accommodation">Accommodations</a></li>
+            <li><a href="#thingstodo">Things to do</a></li>
+            <li><a href="#wondering">Wonderings</a></li>
+            <li><a href="#">RSVP</a></li>
+          </ul>
+        </section>
+      </nav>
+    </div>
+
     <div class="main-container">
 
       <!-- Intro content -->
@@ -23,9 +46,10 @@
         <div class="small-12 medium-12 large-12 column">
           <img class="row-image" data-interchange="[images/bg-intro2-mobile.jpg, (default)], [images/bg-intro2-tablet.jpg, (medium)], [images/bg-intro2-desktop.jpg, (large)]">
           <div class="row-content with-background text-center">
-            <h1 class="white intro-title">Arvin Singla & Caroline Habib</h1>
-            <h3 class="white subtitle date show-for-medium-up">are getting married december 28th, 2014 in Toronto</h3>
-            <h4 class="white date show-for-small-only">On September 27, 2014<br/>in San Antonio, TX</h4>
+            <h1 class="white intro-title show-for-medium-up">Arvin Singla & Caroline Habib</h1>
+            <h2 class="white intro-title show-for-small-only">Arvin & Caroline</h2>
+            <h3 class="white subtitle show-for-medium-up">are getting married december 28th, 2014 in Toronto</h3>
+            <h4 class="white subtitle show-for-small-only">are getting married<br/>december 28th, 2014 in Toronto</h4>
             <a href="#" class="button wide button-modal secondary" data-modal="rsvp"><span>Go ahead and RSVP here!</span><span>We promise you an awesome time!</span></a>
           </div>
         </div>
@@ -41,54 +65,46 @@
       <div id="events" class="row">
         <div class="small-12 medium-12 large-12 column">
           <div class="row-content text-center">
+            <a name="events"></a>
             <h2 class="mint">Events of the day</h1>
             <div class="icon medium-grey-div"></div>
             <div id="timeline">
               <div class="event">
-                <h4 class="charcoal time">5:00pm</h4>
                 <div class="timeline-circle"></div>
+                <h4 class="charcoal time">5:00pm</h4>
                 <h4 class="red">Doors open at the spoke club</h4>
                 <h5>600 King St. W</h5>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                 <div class="actions">
-                  <a href="#" class="car red">Here's where you can park</a>
-                  <a href="#" class="marker red">Get directions to the venue</a>
+                  <a href="#" class="red"><div class="icon parking"></div> Here's where you can park</a>
+                  <a href="#" class="red"><div class="icon directions"></div> Get directions to the venue</a>
                 </div>
               </div>
 
               <div class="event">
-                <h4 class="charcoal time">5:00pm</h4>
                 <div class="timeline-circle"></div>
+                <h4 class="charcoal time">5:00pm</h4>
                 <h4 class="red">Doors open at the spoke club</h4>
                 <h5>600 King St. W</h5>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                <div class="actions">
-                  <a href="#" class="car">Here's where you can park</a>
-                  <a href="#" class="marker">Get directions to the venue</a>
-                </div>
               </div>
 
               <div class="event">
-                <h4 class="charcoal time">5:00pm</h4>
                 <div class="timeline-circle"></div>
+                <h4 class="charcoal time">5:00pm</h4>
                 <h4 class="red">Doors open at the spoke club</h4>
                 <h5>600 King St. W</h5>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                <div class="actions">
-                  <a href="#" class="car">Here's where you can park</a>
-                  <a href="#" class="marker">Get directions to the venue</a>
-                </div>
               </div>
 
               <div class="event last">
-                <h4 class="charcoal time">5:00pm</h4>
                 <div class="timeline-circle"></div>
+                <h4 class="charcoal time">5:00pm</h4>
                 <h4 class="red">Doors open at the spoke club</h4>
                 <h5>600 King St. W</h5>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                 <div class="actions">
-                  <a href="#" class="car">Here's where you can park</a>
-                  <a href="#" class="marker">Get directions to the venue</a>
+                  <div class="icon menu"></div><a href="#" class="red">Here's where you can park</a>
                 </div>
               </div>
 
@@ -107,6 +123,7 @@
       <div id="acommodations" class="row">
         <!-- Hotel -->
         <div class="small-12 medium-7 large-7 column">
+          <a name="accommodation"></a>
           <img class="row-image" data-interchange="[images/bg-accomodations-mobile.jpg, (default)], [images/bg-accomodations-tablet.jpg, (medium)], [images/bg-accomodations-desktop.jpg, (large)]">
           <div class="row-content with-background text-center hyatt">
             <h2 class="gold">Hyatt Regency Toronto</h2>
@@ -114,15 +131,21 @@
             <h5 class="white">$129/Night - 9min Walk to Ceremony</h5>
             <p class="white">The Hyatt Regency lies in the heart of downtown Toronto and is walking<br/> distance to the ceremony/reception! Try to book by October 15th, 2014 using link below.</p>
             <p class="white">Parking is avialable at the hotel, or at a number of lots in the area.</p>
-            <a href="#" class="button button-modal"><span>Book this Hotel!</span><span>la la la</span></a>
-            <a href="#" class="button button-modal secondary"><span>Get Directions</span><span>la la la</span></a>
+            <a target="_BLANK" class="button button-modal" href="https://resweb.passkey.com/Resweb.do?mode=welcome_ei_new&eventID=11750443">
+              <span>Book this Hotel!</span><span>la la la</span>
+            </a>
+            <a target="_BLANK" class="button button-modal secondary" href="https://www.google.ca/maps/dir//Hyatt+Regency+Toronto,+370+King+St+W,+Toronto,+ON+M5V+1J9/@43.646285,-79.391716,17z/data=!4m12!1m3!3m2!1s0x882b34da0ea12bbb:0x7b9bf41770995c2e!2sHyatt+Regency+Toronto!4m7!1m0!1m5!1m1!1s0x882b34da0ea12bbb:0x7b9bf41770995c2e!2m2!1d-79.391716!2d43.646285?hl=en">
+              <span>Get Directions</span><span>la la la</span>
+            </a>
           </div>
         </div>
         <!-- Airbnb -->
         <div class="small-12 medium-5 large-5 column">
           <img class="row-image" data-interchange="[images/bg-accomodations2-mobile.jpg, (default)], [images/bg-accomodations2-tablet.jpg, (medium)], [images/bg-accomodations2-desktop.jpg, (large)]">
           <div class="row-content with-background text-center airbnb">
-            <a href="#" class="button wide button-modal secondary"><span>Don't like hotels? Try AirBNB</span><span>la la la</span></a>
+            <a class="button wide button-modal secondary" target="_BLANK" href="https://www.airbnb.ca/s/toronto?checkin=27-12-2014&checkout=29-12-2014&guests=2&sw_lat=43.642299424568215&sw_lng=-79.40611476785625&ne_lat=43.65222511450421&ne_lng=-79.39465637094463&zoom=16&search_by_map=true">
+              <span>Don't like hotels? Try AirBNB</span><span>la la la</span>
+            </a>
           </div>
         </div>
       </div>
@@ -137,6 +160,7 @@
       <div id="wondering" class="row">
         <div class="small-12 medium-12 large-12 column">
           <div class="row-content text-center">
+            <a name="wondering"></a>
             <h2 class="mint">Things you may be wondering</h1>
             <div class="icon medium-grey-div"></div>
             <div class="wondering-item">
@@ -163,7 +187,8 @@
       <div id="thingstodo" class="row">
         <div class="small-12 medium-12 large-12 column">
           <div class="slider-constant-text">
-            <h5 class="white">Things to do while in Toronto</h5>
+            <a name="thingstodo"></a>
+            <h4 class="white">Things to do while you're in Toronto</h4>
             <div class="icon long-white-div"></div>
           </div>
           <div class="flexslider">
@@ -172,14 +197,14 @@
                 <img class="row-image" data-interchange="[images/bg-slide1-mobile.jpg, (default)], [images/bg-slide1-tablet.jpg, (medium)], [images/bg-slide1-desktop.jpg, (large)]">
                 <div class="slide-wrapper">
                   <h2 class="gold">#1 Shopping on the most awesome Queen Street</h2>
-                  <p class="white">Living the Toronto condo life we cultivate a minimalist lifestyle. We thought about registering but couldn't come up with anything we really needed or wanted. Your presence is our gift, but were you so generous to get us something we would kindly ask please no boxed gifts.</p>
+                  <p class="white show-for-medium-up">Living the Toronto condo life we cultivate a minimalist lifestyle. We thought about registering but couldn't come up with anything we really needed or wanted. Your presence is our gift, but were you so generous to get us something we would kindly ask please no boxed gifts.</p>
                 </div>
               </li>
               <li class="slide-cntower">
                 <img class="row-image" data-interchange="[images/bg-slide1-mobile.jpg, (default)], [images/bg-slide1-tablet.jpg, (medium)], [images/bg-slide1-desktop.jpg, (large)]">
                 <div class="slide-wrapper">
                   <h2 class="gold">#1 Shopping on the most awesome Queen Street</h2>
-                  <p class="white">Living the Toronto condo life we cultivate a minimalist lifestyle. We thought about registering but couldn't come up with anything we really needed or wanted. Your presence is our gift, but were you so generous to get us something we would kindly ask please no boxed gifts.</p>
+                  <p class="white show-for-medium-up">Living the Toronto condo life we cultivate a minimalist lifestyle. We thought about registering but couldn't come up with anything we really needed or wanted. Your presence is our gift, but were you so generous to get us something we would kindly ask please no boxed gifts.</p>
                 </div>
               </li>
             </ul>

@@ -1,12 +1,16 @@
 .icon {
   margin: 0 auto;
+  &.logo-desktop {
+    @include icons-sprite(icon-logo-desktop);
+    @include resize-sprite($icons-sprites, icon-logo-desktop, 50);
+  }
   &.medium-grey-div {
     @include icons-sprite('medium-grey-div');
     @include resize-sprite($icons-sprites, 'medium-grey-div', 50);
   }
   &.medium-white-div {
-    @include icons-sprite(medium-white-div);
-    @include resize-sprite($icons-sprites, medium-white-div, 50);
+    @include icons-sprite('medium-white-div');
+    @include resize-sprite($icons-sprites, 'medium-white-div', 50);
   }
   &.long-white-div {
     @include icons-sprite(long-white-div);

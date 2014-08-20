@@ -51,6 +51,7 @@ FastClick.attach(document.body);
     $('body').addClass('loaded');
     // Curve the main intro text on an arc
     $("h1.intro-title").arctext({radius: 2500});
+    $("h2.intro-title").arctext({radius: 1000});
     // Initialize the cats
     initializeCats();
     // Initialize the slider

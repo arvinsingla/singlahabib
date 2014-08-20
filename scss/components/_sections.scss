@@ -31,7 +31,6 @@ body {
 }
 
 .row {
-  // @include single-box-shadow($shadow-color, 0px, rem-calc(5px), rem-calc(15px), false, false);
   .row-content {
     width: 100%;
     &.with-background {
@@ -43,6 +42,9 @@ body {
   }
 }
 
+/**
+ * Intro Section
+ */
 #intro {
   .row-content.with-background {
     top: 35%;
@@ -64,8 +66,34 @@ body {
   }
 }
 
+@media #{$small-only} {
+  #intro {
+    .row-content.with-background {
+      top: 20%;
+    }
+    // Intro section
+    h2.intro-title {
+      padding: 0;
+      margin: 0;
+      line-height: rem-calc(115px);
+      .char7 {
+        color: $red;
+      }
+    }
+    h4.subtitle {
+      margin: 0;
+      padding: rem-calc(20px) 0 rem-calc(50px) 0;
+      font-style: italic;
+      font-weight: normal;
+    }
+  }
+}
+
+/**
+ * Events Section
+ */
 #events {
-  padding: rem-calc(70px) 35%;
+  padding: rem-calc(70px) 30%;
   h2 {
     margin-bottom: 0;
   }
@@ -95,6 +123,8 @@ body {
     h4, h5 {
       padding: 0;
       margin: 0;
+      text-transform: uppercase;
+      letter-spacing: 0;
     }
     .timeline-circle {
       position: absolute;
@@ -106,12 +136,40 @@ body {
       position: absolute;
       left: rem-calc(-130px);
     }
+    .actions {
+      .icon {
+        display: inline-block;
+        top: rem-calc(5px);
+        position: relative;
+        margin-right: rem-calc(5px);
+      }
+      a {
+        margin-right: rem-calc(10px);
+      }
+    }
+
   }
   .event.last {
     padding: 0;
   }
 }
 
+@media #{$small-only} {
+  #events {
+    padding: rem-calc(35px) rem-calc(10px);
+    .event {
+      padding: 0 0 rem-calc(50px) 0;
+      .time {
+        position: inherit;
+        left: 0;
+      }
+    }
+  }
+}
+
+/**
+ * Accommodations
+ */
 #acommodations {
   .row-content.with-background.hyatt {
     top: 27%;
@@ -144,8 +202,19 @@ body {
   }
 }
 
+@media #{$small-only} {
+  #acommodations {
+    .row-content.with-background.hyatt {
+      top: 10%;
+    }
+  }
+}
+
+/**
+ * Wondering Section
+ */
 #wondering {
-  padding: rem-calc(70px) 30%;
+  padding: rem-calc(70px) 25%;
   h2 {
     margin-bottom: 0;
   }
@@ -166,14 +235,26 @@ body {
   }
 }
 
+@media #{$small-only} {
+  #wondering {
+    padding: rem-calc(35px) rem-calc(20px);
+    h2 {
+      line-height: rem-calc(70px);
+    }
+  }
+}
+
+/**
+ * Things to do in Toronto section
+ */
 #thingstodo {
   .slider-constant-text {
     position: absolute;
-    top: 0;
+    top: 30%;
     z-index: 999;
     text-align: center;
     width: 100%;
-    h5 {
+    h4 {
       text-transform: uppercase;
       font-weight: normal;
     }
@@ -184,7 +265,7 @@ body {
       text-align: center;
       .slide-wrapper {
         position: absolute;
-        top: 30%;
+        top: 50%;
         padding: 0 20%;
       }
       h2 {
@@ -199,12 +280,17 @@ body {
     border: 0;
   }
   .flex-control-nav {
-    bottom: rem-calc(10px);
+    bottom: rem-calc(50px);
   }
   .flex-control-paging li a {
     background: $white;
+    width: rem-calc(15px);
+    height: rem-calc(15px);
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
     &.flex-active {
-      background: $grey;
+      background: rgba(0,0,0,0.3);
     }
   }
   .flex-direction-nav a {
@@ -212,6 +298,26 @@ body {
   }
 }
 
+@media #{$small-only} {
+  #thingstodo {
+    .slider-constant-text {
+      top: 10%;
+      padding: 0 10%;
+    }
+    ul.slides {
+      li {
+        .slide-wrapper {
+          top: 40%;
+          padding: 0 10%;
+        }
+      }
+    }
+  }
+}
+
+/**
+ * Contact section
+ */
 #contact {
   .row-content {
     padding: rem-calc(80px);
@@ -228,6 +334,20 @@ body {
   }
 }
 
+@media #{$small-only} {
+  #contact {
+    .row-content {
+      padding: rem-calc(35px) rem-calc(20px);
+    }
+    h3 {
+      padding-bottom: rem-calc(40px);
+    }
+  }
+}
+
+/**
+ * Outro section
+ */
 #outro {
   .row-content.with-background {
     top: 35%;
@@ -235,5 +355,17 @@ body {
   h1 {
     padding: 0;
     margin: 0;
+  }
+}
+
+@media #{$small-only} {
+  #outro {
+    .row-content.with-background {
+      padding: rem-calc(35px) rem-calc(20px);
+      top: 20%;
+    }
+    h2 {
+      line-height: rem-calc(70px);
+    }
   }
 }

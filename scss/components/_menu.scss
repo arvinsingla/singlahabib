@@ -1,0 +1,26 @@
+.fixed.top-bar-container {
+  z-index: 1000;
+  border-bottom: 1px solid $light-grey;
+}
+
+nav.top-bar {
+  div.logo-desktop {
+    display: inline-block;
+    margin-top: rem-calc(23px);
+  }
+  ul.title-area {
+    padding-left: 10%;
+  }
+  section.top-bar-section {
+    ul.right {
+      padding-right: 10%;
+    }
+  }
+}
+
+@media #{$small-only} {
+  .top-bar {
+    height: rem-calc(60px);
+    line-height: rem-calc(60px);
+  }
+}

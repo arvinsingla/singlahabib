@@ -44,7 +44,7 @@
   &.tip-right {
     .cat {
       right: rem-calc(-163px);
-      background: url('../images/pusheen-left.png') no-repeat top left;
+      @include icons-sprite('pusheen-left');
     }
     .tooltip {
       right: rem-calc(20px);
@@ -66,7 +66,7 @@
   }
   &.tip-left {
     .cat {
-      background: url('../images/pusheen-right.png') no-repeat top left;
+      @include icons-sprite('pusheen-right');
       left: rem-calc(-163px);
     }
     .tooltip {
