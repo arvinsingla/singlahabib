@@ -170,7 +170,7 @@ body {
 /**
  * Accommodations
  */
-#acommodations {
+#accommodation {
   .row-content.with-background.hyatt {
     top: 27%;
   }
@@ -203,7 +203,7 @@ body {
 }
 
 @media #{$small-only} {
-  #acommodations {
+  #accommodations {
     .row-content.with-background.hyatt {
       top: 10%;
     }

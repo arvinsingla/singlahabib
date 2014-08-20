@@ -43,6 +43,23 @@ FastClick.attach(document.body);
   };
 
   /**
+   * Handle top menu click scrolling
+   */
+  $('nav a').click(function(e) {
+    // Don't perform the default action.
+    e.preventDefault();
+    // Get the name of the element we are looking for
+    var position = $(this).attr('href').substr(1);
+    console.log(position);
+    // Get the position of the named element on the page.
+    var positionToScroll = $('#' + position).position();
+    // Animate the scroll to the position.
+    $('html,body').animate({
+      scrollTop: positionToScroll.top
+    }, 700);
+  });
+
+  /**
    * Page Loading Events
    */
   // Events to fire when the page has fully loaded.
