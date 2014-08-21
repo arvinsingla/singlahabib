@@ -4,6 +4,10 @@
     @include icons-sprite(icon-logo-desktop);
     @include resize-sprite($icons-sprites, icon-logo-desktop, 50);
   }
+  &.logo-mobile {
+    @include icons-sprite(icon-logo-tabmobile);
+    @include resize-sprite($icons-sprites, icon-logo-tabmobile, 50);
+  }
   &.medium-grey-div {
     @include icons-sprite('medium-grey-div');
     @include resize-sprite($icons-sprites, 'medium-grey-div', 50);

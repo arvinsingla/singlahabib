@@ -19,8 +19,20 @@ nav.top-bar {
 }
 
 @media #{$small-only} {
-  .top-bar {
+  nav.top-bar {
     height: rem-calc(60px);
     line-height: rem-calc(60px);
+    section.top-bar-section {
+      ul.right {
+        padding-right: 0;
+      }
+    }
+    .top-bar-section ul li {
+      background: $white;
+      text-align: center;
+    }
+    .top-bar-section ul li > a {
+      padding-left: 0;
+    }
   }
 }
