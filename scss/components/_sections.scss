@@ -43,48 +43,63 @@ body {
 }
 
 /**
+ * Desktop & mobile hiding
+ */
+.desktop {
+  display: none;
+}
+
+@media #{$large-up} {
+  .desktop {
+    display: block;
+  }
+  .mobile {
+    display: none;
+  }
+}
+
+/**
  * Intro Section
  */
 #intro {
   .row-content.with-background {
-    top: 35%;
+    top: 20%;
   }
   // Intro section
-  h1.intro-title {
-    letter-spacing: rem-calc(1px);
+  .intro-title {
     padding: 0;
     margin: 0;
     line-height: rem-calc(115px);
-    .char14 {
+    .char10 {
       color: $red;
     }
   }
-  h3.subtitle {
+  .subtitle {
     margin: 0;
     padding: rem-calc(20px) 0 rem-calc(50px) 0;
     font-style: italic;
+    font-weight: normal;
   }
 }
 
-@media #{$small-only} {
+@media #{$medium-up} {
   #intro {
     .row-content.with-background {
-      top: 20%;
+      top: 35%;
     }
     // Intro section
-    h2.intro-title {
-      padding: 0;
-      margin: 0;
+    .intro-title {
+      letter-spacing: rem-calc(1px);
       line-height: rem-calc(115px);
-      .char7 {
+      .char10 {
+        color: $white;
+      }
+      .char16 {
         color: $red;
       }
     }
-    h4.subtitle {
-      margin: 0;
+    .subtitle {
       padding: rem-calc(20px) 0 rem-calc(50px) 0;
-      font-style: italic;
-      font-weight: normal;
     }
   }
 }
@@ -93,7 +108,7 @@ body {
  * Events Section
  */
 #events {
-  padding: rem-calc(70px) 30%;
+  padding: rem-calc(35px) rem-calc(10px);
   h2 {
     margin-bottom: 0;
   }
@@ -118,7 +133,7 @@ body {
   }
   .event {
     text-align: left;
-    padding: 0 0 rem-calc(100px) 0;
+    padding: 0 0 rem-calc(50px) 0;
     position: relative;
     h4, h5 {
       padding: 0;
@@ -133,8 +148,8 @@ body {
       @include resize-sprite($icons-sprites, icon-timeline-dot, 50);
     }
     .time {
-      position: absolute;
-      left: rem-calc(-130px);
+      position: inherit;
+      left: 0;
     }
     .actions {
       .icon {
@@ -154,14 +169,14 @@ body {
   }
 }
 
-@media #{$small-only} {
+@media #{$medium-up} {
   #events {
-    padding: rem-calc(35px) rem-calc(10px);
+    padding: rem-calc(70px) 25%;
     .event {
-      padding: 0 0 rem-calc(50px) 0;
+      padding: 0 0 rem-calc(100px) 0;
       .time {
-        position: inherit;
-        left: 0;
+        position: absolute;
+        left: rem-calc(-130px);
       }
     }
   }
@@ -172,7 +187,7 @@ body {
  */
 #accommodation {
   .row-content.with-background.hyatt {
-    top: 27%;
+    top: 10%;
   }
   .row-content.with-background.airbnb {
     top: 60%;
@@ -202,10 +217,10 @@ body {
   }
 }
 
-@media #{$small-only} {
-  #accommodations {
+@media #{$medium-up} {
+  #accommodation {
     .row-content.with-background.hyatt {
-      top: 10%;
+      top: 27%;
     }
   }
 }
@@ -214,8 +229,9 @@ body {
  * Wondering Section
  */
 #wondering {
-  padding: rem-calc(70px) 25%;
+  padding: rem-calc(35px) rem-calc(20px);
   h2 {
+    line-height: rem-calc(70px);
     margin-bottom: 0;
   }
   .icon.medium-grey-div {
@@ -235,12 +251,15 @@ body {
   }
 }
 
-@media #{$small-only} {
+@media #{$medium-only} {
   #wondering {
-    padding: rem-calc(35px) rem-calc(20px);
-    h2 {
-      line-height: rem-calc(70px);
-    }
+    padding: rem-calc(70px) 15%;
+  }
+}
+
+@media #{$large-up} {
+  #wondering {
+    padding: rem-calc(70px) 25%;
   }
 }
 
@@ -250,7 +269,8 @@ body {
 #thingstodo {
   .slider-constant-text {
     position: absolute;
-    top: 30%;
+    top: 10%;
+    padding: 0 10%;
     z-index: 999;
     text-align: center;
     width: 100%;
@@ -265,13 +285,13 @@ body {
       text-align: center;
       .slide-wrapper {
         position: absolute;
-        top: 50%;
-        padding: 0 20%;
-      }
-      h2 {
-        margin: 0;
-        padding: 0;
-        line-height: rem-calc(50px);
+        top: 40%;
+        padding: 0 10%;
+        h2 {
+          margin: 0;
+          padding: 0;
+          line-height: rem-calc(50px);
+        }
       }
     }
   }
@@ -298,17 +318,60 @@ body {
   }
 }
 
-@media #{$small-only} {
+@media #{$medium-only} {
   #thingstodo {
     .slider-constant-text {
-      top: 10%;
-      padding: 0 10%;
+      top: 20%;
+      padding: 0;
     }
     ul.slides {
       li {
         .slide-wrapper {
           top: 40%;
-          padding: 0 10%;
+          padding: 0 20%;
+          h2 {
+            line-height: rem-calc(90px);
+          }
+        }
+      }
+    }
+  }
+}
+
+@media #{$large-up} {
+  #thingstodo {
+    .slider-constant-text {
+      top: 20%;
+      padding: 0;
+    }
+    ul.slides {
+      li {
+        .slide-wrapper {
+          top: 40%;
+          padding: 0 5%;
+          h2 {
+            line-height: rem-calc(90px);
+          }
+        }
+      }
+    }
+  }
+}
+
+@media #{$xlarge-up} {
+  #thingstodo {
+    .slider-constant-text {
+      top: 30%;
+      padding: 0;
+    }
+    ul.slides {
+      li {
+        .slide-wrapper {
+          top: 50%;
+          padding: 0 20%;
+          h2 {
+            line-height: rem-calc(90px);
+          }
         }
       }
     }
@@ -320,7 +383,7 @@ body {
  */
 #contact {
   .row-content {
-    padding: rem-calc(80px);
+    padding: rem-calc(35px) rem-calc(20px);
   }
   h2 {
     margin-bottom: 0;
@@ -330,17 +393,17 @@ body {
     margin-bottom: rem-calc(60px);
   }
   h3 {
-    padding-bottom: rem-calc(80px);
+    padding-bottom: rem-calc(40px);
   }
 }
 
-@media #{$small-only} {
+@media #{$medium-up} {
   #contact {
     .row-content {
-      padding: rem-calc(35px) rem-calc(20px);
+      padding: rem-calc(80px);
     }
     h3 {
-      padding-bottom: rem-calc(40px);
+      padding-bottom: rem-calc(80px);
     }
   }
 }
@@ -350,22 +413,20 @@ body {
  */
 #outro {
   .row-content.with-background {
-    top: 35%;
+    padding: rem-calc(35px) rem-calc(20px);
+    top: 10%;
   }
-  h1 {
-    padding: 0;
+  h2 {
+    padding: rem-calc(50px) 0 rem-calc(20px) 0;
     margin: 0;
+    line-height: rem-calc(70px);
   }
 }
 
-@media #{$small-only} {
+@media #{$medium-up} {
   #outro {
     .row-content.with-background {
-      padding: rem-calc(35px) rem-calc(20px);
-      top: 20%;
-    }
-    h2 {
-      line-height: rem-calc(70px);
+      top: 35%;
     }
   }
 }

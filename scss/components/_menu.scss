@@ -1,38 +1,110 @@
-.fixed.top-bar-container {
+.menu.fixed {
   z-index: 1000;
+}
+
+.menu nav {
+  height: rem-calc(60px);
+  padding: 0;
+  background-color: $white;
   border-bottom: 1px solid $light-grey;
-}
-
-nav.top-bar {
-  div.logo-desktop {
-    display: inline-block;
-    margin-top: rem-calc(23px);
-  }
-  ul.title-area {
-    padding-left: 10%;
-  }
-  section.top-bar-section {
-    ul.right {
-      padding-right: 10%;
-    }
-  }
-}
-
-@media #{$small-only} {
-  nav.top-bar {
-    height: rem-calc(60px);
-    line-height: rem-calc(60px);
-    section.top-bar-section {
-      ul.right {
-        padding-right: 0;
+  position: relative;
+  ul {
+    position: absolute;
+    top: rem-calc(60px);
+    display: none;
+    width: 100%;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    li {
+      width: 100%;
+      background: $white;
+      a {
+        line-height: rem-calc(40px);
+        width: 100%;
+        text-align: center;
+        text-transform: uppercase;
       }
     }
-    .top-bar-section ul li {
-      background: $white;
-      text-align: center;
+  }
+  a:link,
+  a:visited {
+    color: $charcoal;
+  }
+  a:hover {
+    color: $mint;
+  }
+  .show-menu {
+    display: block;
+    width: 100%;
+    line-height: rem-calc(60px);
+    text-align: center;
+    font-family: $font-tisa;
+    cursor: pointer;
+    text-transform: uppercase;
+    z-index: 1001;
+  }
+  input[type=checkbox] {
+    display: none;
+  }
+  input[type=checkbox]:checked ~ #menu-items {
+    display: block;
+  }
+  .logo-mobile {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: rem-calc(15px);
+    z-index: 1000;
+    display: block;
+    cursor: pointer;
+  }
+  .logo-desktop {
+    position: absolute;
+    top: rem-calc(20px);
+    display: none;
+  }
+}
+
+@media #{$large-up} {
+  .menu nav {
+    height: rem-calc(75px);
+    padding: 0 15%;
+    ul {
+      top: 0;
+      display: block;
+      float: right;
+      width: initial;
+      position: relative;
+      li {
+        display: inline-block;
+        padding: 0 rem-calc(10px);
+        width: initial;
+        background: none;
+        a {
+          line-height: rem-calc(75px);
+          &.menu-rsvp {
+            line-height: rem-calc(40px);
+            background: $mint;
+            @include border-radius($button-radius);
+            padding: 0 rem-calc(40px);
+            &:link,
+            &:visited {
+              color: $white;
+            }
+            &:hover {
+              color: $charcoal;
+            }
+          }
+        }
+      }
     }
-    .top-bar-section ul li > a {
-      padding-left: 0;
+    .logo-mobile,
+    .show-menu {
+      display: none;
+    }
+    .logo-desktop {
+      display: block;
     }
   }
 }

@@ -26,6 +26,9 @@
     @include single-transition(all, 0.3s, false, false);
     @include transition-delay(0s);
     top: rem-calc(-150px);
+    font-family: $font-tisa;
+    font-style: italic;
+    font-size: rem-calc(14px);
     &:after {
       top: 100%;
       left: 85%;
@@ -43,8 +46,9 @@
   }
   &.tip-right {
     .cat {
-      right: rem-calc(-163px);
+      right: rem-calc(-125px);
       @include icons-sprite('pusheen-left');
+      @include resize-sprite($icons-sprites, pusheen-left, 70);
     }
     .tooltip {
       right: rem-calc(20px);
@@ -56,7 +60,7 @@
     }
     &.expand {
       .cat {
-        @include transform(rotate(60deg) translate3d(rem-calc(-70px),rem-calc(70px),0));
+        @include transform(rotate(60deg) translate3d(rem-calc(-85px),rem-calc(54px),0));
       }
       .tooltip {
         opacity: 1;
@@ -67,7 +71,8 @@
   &.tip-left {
     .cat {
       @include icons-sprite('pusheen-right');
-      left: rem-calc(-163px);
+      @include resize-sprite($icons-sprites, pusheen-right, 70);
+      left: rem-calc(-125px);
     }
     .tooltip {
       left: rem-calc(20px);
@@ -82,7 +87,7 @@
     }
     &.expand {
       .cat {
-        @include transform(rotate(-60deg) translate3d(rem-calc(70px),rem-calc(70px),0));
+        @include transform(rotate(-60deg) translate3d(rem-calc(85px),rem-calc(54px),0));
       }
       .tooltip {
         opacity: 1;

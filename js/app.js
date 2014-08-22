@@ -48,15 +48,25 @@ FastClick.attach(document.body);
   $('nav a').click(function(e) {
     // Don't perform the default action.
     e.preventDefault();
+    // On mobile, uncheck the checkbox to hide the mobile menu.
+    $('input#show-menu').attr('checked', false);
     // Get the name of the element we are looking for
     var position = $(this).attr('href').substr(1);
-    console.log(position);
     // Get the position of the named element on the page.
     var positionToScroll = $('#' + position).position();
     // Animate the scroll to the position.
     $('html,body').animate({
       scrollTop: positionToScroll.top
     }, 700);
+  });
+  var $menuCheckbox = $('input#show-menu');
+  // Handle edge case issue with mobile logo overtop of menu item
+  $('.logo-mobile').click(function() {
+    if ($menuCheckbox.prop('checked') == true) {
+      $menuCheckbox.prop('checked', false);
+    } else {
+      $menuCheckbox.prop('checked', true);
+    }
   });
 
   /**

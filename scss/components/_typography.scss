@@ -61,6 +61,10 @@ a {
   }
 }
 
+a:link.tel {
+  color: $red;
+  border-bottom: 1px solid $red;
+}
 
 @media #{$small-only} {
   h2 {
