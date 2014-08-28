@@ -52,4 +52,16 @@
     @include icons-sprite(icon-menu);
     @include resize-sprite($icons-sprites, icon-menu, 50);
   }
+  &.weddingparty {
+    @include icons-sprite(icon-weddingparty);
+    @include resize-sprite($icons-sprites, icon-menu, 50);
+  }
+  &.checkmark {
+    @include icons-sprite(icon-checkmark);
+    @include resize-sprite($icons-sprites, icon-menu, 50);
+  }
+  &.close {
+    @include icons-sprite(icon-close);
+    @include resize-sprite($icons-sprites, icon-menu, 50);
+  }
 }

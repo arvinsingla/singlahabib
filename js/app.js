@@ -45,7 +45,7 @@ FastClick.attach(document.body);
   /**
    * Handle top menu click scrolling
    */
-  $('nav a').click(function(e) {
+  $('nav a[href!="#"]').click(function(e) {
     // Don't perform the default action.
     e.preventDefault();
     // On mobile, uncheck the checkbox to hide the mobile menu.
@@ -68,6 +68,142 @@ FastClick.attach(document.body);
       $menuCheckbox.prop('checked', true);
     }
   });
+
+  /**
+   * RSVP form
+   */
+
+  // Show the RSVP form when a button is clicked.
+  var position;
+  $("a[data-modal='rsvp']" ).click(function(e){
+    e.preventDefault();
+    position = $(window).scrollTop();
+    $('#rsvp').addClass('open');
+    $('input#show-menu').attr('checked', false);
+    setTimeout(function(){
+      $('.main-container').addClass('hide');
+    }, 1000);
+  })
+  // Hide the RSVP form when a button is clicked.
+  $("a.rsvp-close").click(function(e) {
+    e.preventDefault();
+    $('.main-container').removeClass('hide');
+    $('body').scrollTop(position);
+    $('#rsvp').removeClass('open');
+  });
+
+  // Add/remove for items based on what is selected.
+  $("#rsvp form input").change(function(e) {
+    var element = $(this).attr('id');
+
+    switch(element) {
+      case 'going':
+        $('#your-details').addClass('show');
+        $('.radio-group.plusone').addClass('show');
+        $('#your-details .your-details-going').addClass('show');
+        break;
+
+      case 'not-going':
+        $('#your-details').addClass('show');
+        $('.radio-group.plusone').removeClass('show');
+        $('#plusone-details').removeClass('show');
+        $('#your-details .your-details-going').removeClass('show');
+        break;
+
+      case 'no-plusone':
+        $('#plusone-details').removeClass('show');
+        break;
+
+      case 'plusone':
+        $('#plusone-details').addClass('show');
+        break;
+    }
+  });
+
+  // Submit button handler for validation.
+  $("#rsvp input[name='rsvp-submit']").click(function(e) {
+    e.preventDefault();
+    var going = $('input[name=going]:checked', '#rsvp').val();
+    var plusone = $('input[name=plusone]:checked').val();
+    var $form = $('#rsvp form');
+    var valid = false;
+    switch (going) {
+      case 'yes':
+        if (plusone === 'yes') {
+          valid = $form.parsley().validate('going-plusone');
+        } else {
+          valid = $form.parsley().validate('going');
+        }
+        break;
+
+      case 'no':
+        valid = $form.parsley().validate('not-going');
+        break;
+
+      default:
+        valid = $form.parsley().validate('going');
+    }
+
+    if (valid) {
+      mailCurrentForm(going, plusone);
+    } else {
+      // @todo handle error
+    }
+  });
+
+  var mailCurrentForm = function(going, plusone) {
+    var email = "rsvp@singlahabib.com";
+    var name = $('input[name=guest-name]', '#rsvp').val();
+    var subject = "RSVP from " + name;
+    var body = "Name: " + name + "<br/>";
+    if (going === 'yes') {
+      body += "Going: Yes<br/>";
+      body += "Address: " + $('input[name=guest-address]', '#rsvp').val() + "<br/>";
+      body += "Meal: " + $('input[name=guest-meal]:checked', '#rsvp').val() + "<br/>";
+      if ($('input[name=guest-notes]', '#rsvp').val()) {
+        body += "Notes: " + $('input[name=guest-notes]', '#rsvp').val() + "<br/>";
+      }
+      if (plusone === 'yes') {
+        body += "Plus 1: Yes<br/>";
+        body += "Guest Name: " + $('input[name=plusone-name]', '#rsvp').val() + "<br/>";
+        body += "Guest Meal: " + $('input[name=plusone-meal]:checked', '#rsvp').val() + "<br/>";
+      } else {
+        body += "Plus 1: No<br/>";
+      }
+    } else {
+      body += "Going: No<br/>";
+    }
+    $.ajax(
+    {
+      type: "POST",
+      url: "https://mandrillapp.com/api/1.0/messages/send.json",
+      data: {
+        'key': '444nOhDtNECZLeNBUr-8Sg',
+        'message': {
+          'from_email': email,
+          'from_name': name,
+          'headers': {
+            'Reply-To': email
+          },
+          'subject': subject,
+          'html': body,
+          'to': [
+          {
+            'email': email,
+            'name': 'Caroline & Arvin',
+            'type': 'to'
+          }]
+        }
+      }
+    })
+    .done(function(response) {
+      //document.cookie="rsvp=true";
+      $("a.rsvp-close").trigger('click');
+    })
+    .fail(function(response) {
+      alert('Error sending message.');
+    });
+  }
 
   /**
    * Page Loading Events

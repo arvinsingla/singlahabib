@@ -1,0 +1,156 @@
+#rsvp {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  overflow: scroll;
+  -webkit-transform: translate3d(0, -100%, 0);
+  -webkit-backface-visibility: hidden;
+	-webkit-perspective: 1000;
+  background-color: $light-light-grey;
+  // background-color: rgba(243, 243, 243, 0.97);
+  padding: rem-calc(10px);
+  z-index: 1002;
+  @include single-transition(all, 0.5s, false, false);
+  h2 {
+    margin: 0;
+    padding: rem-calc(10px) 0;
+    line-height: rem-calc(70px);
+  }
+  &.open {
+    -webkit-transform: translate3d(0, 0, 0);
+    -webkit-overflow-scrolling: touch;
+  }
+  // Hide certain form elements intially.
+  .radio-group.plusone,
+  #your-details,
+  #plusone-details,
+  #your-details .your-details-going {
+    display: none;
+    &.show {
+      display: block;
+    }
+  }
+  .rsvp-close {
+    position: absolute;
+    right: rem-calc(50px);
+    top: rem-calc(50px);
+    z-index: 1005;
+  }
+}
+
+@media #{$medium-up} {
+  #rsvp {
+    padding: rem-calc(30px);
+    &.open {
+      -webkit-transform: translate3d(0, 0, 0);
+    }
+  }
+}
+
+@media #{$large-up} {
+  #rsvp {
+    padding: rem-calc(50px);
+    &.open {
+      -webkit-transform: translate3d(0, 0, 0);
+    }
+  }
+}
+
+/* Prevents focus highlighting on form fields*/
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 0;
+}
+
+/* Removes placeholder text in text areas when selected */
+[placeholder]:focus::-webkit-input-placeholder {
+  transition: opacity 0.2s ease;
+  opacity: 0;
+}
+
+input {
+  min-width: 100%;
+  padding: rem-calc(16px) rem-calc(30px);
+  border: 1px solid $light-light-grey;
+  margin: 0;
+  font-style: $font-tisa;
+  @include border-radius($button-radius);
+  -webkit-appearance: none;
+  @include single-transition(border-color, 0.4s, false, false);
+  &:hover {
+    border-color: $grey;
+    z-index: 9;
+  }
+  &:focus {
+    border-color: $mint;
+    z-index: 9;
+  }
+}
+
+.parsley-error {
+  label {
+    border: 1px solid $red !important;
+  }
+}
+
+input.parsley-error {
+  border-color: $red;
+}
+
+.radio-group {
+  margin: rem-calc(20px) 0;
+  overflow: hidden;
+  input {
+    display: none;
+    &[type="radio"]:checked+label {
+      background-color: $mint;
+      color: $white;
+      border-color: $white;
+    }
+  }
+  &.selected {
+    label {
+      border: 1px solid $green;
+    }
+  }
+  label {
+    width: rem-calc(125px);
+    padding: rem-calc(16px) 0;
+    border: 1px solid $light-light-grey;
+    float: left;
+    cursor: pointer;
+    font-style: $font-tisa;
+    background: $white;
+    @include single-transition(all, 0.5s, false, false);
+    &:hover {
+      color: $green;
+    }
+    &:first-of-type {
+      @include border-top-left-radius($button-radius);
+      @include border-bottom-left-radius($button-radius);
+    }
+    &:last-of-type {
+      @include border-top-right-radius($button-radius);
+      @include border-bottom-right-radius($button-radius);
+    }
+  }
+  &.two-items {
+    label {
+      width: 50%;
+    }
+  }
+  &.three-items {
+    label {
+      width: 33.3%;
+    }
+  }
+}
+
+@media #{$medium-up} {
+  .radio-group {
+    label {
+      width: rem-calc(200px);
+    }
+  }
+}

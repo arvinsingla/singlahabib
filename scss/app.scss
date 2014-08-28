@@ -1,3 +1,5 @@
+$icons-spacing: 10px;
+
 @import
   "normalize",
   "settings",
@@ -10,6 +12,7 @@
   "mixins",
   "icons/*.png",
   "components/menu",
+  "components/rsvp",
   "components/cats",
   "components/sections",
   "components/buttons",

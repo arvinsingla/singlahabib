@@ -10,14 +10,14 @@
 
   </head>
   <body>
-    
+
 
 <!-- Loading container div -->
 <div class="loading"></div>
 
 <!-- RSVP form -->
 <div id="rsvp" class="row">
-  <div class="icon close"></div>
+  <a href="#" class="rsvp-close">Close</a>
   <div class="small-12 medium-6 large-4 large-centered medium-centered columns">
     <div class="row-content text-center">
       <form id="rsvp-form" data-parsley-validate>
@@ -46,10 +46,10 @@
 
         <div id="plusone-details">
           <h3>Your guest details</h3>
-          <input type="text" placeholder="Full Name" name="plusone-name" required data-parsley-errors-messages-disabled data-parsley-group='["going-plusone"]'/>
+          <input type="text" placeholder="Full Name" name="guest-name" required data-parsley-errors-messages-disabled data-parsley-group='["going-plusone"]'/>
           <div class="radio-group three-items form-group" id="plusone-meal">
             <input type="radio" name="plusone-meal" value="beef" id="plusone-meal-beef" required data-parsley-errors-messages-disabled data-parsley-group='["going-plusone"]'><label for="plusone-meal-beef">Beef</label>
-            <input type="radio" name="plusone-meal" value="fish" id="plusone-meal-fish" required><label for="plusone-meal-fish">Fish</label>
+            <input type="radio" name="plusone-meal" value="fish" id="plusone-meal-fish" required><label for="plusone-meal-fish">fish</label>
             <input type="radio" name="plusone-meal" value="vegetarian" id="plusone-meal-vegetarian" required><label for="plusone-meal-vegetarian">Vegetarian</label>
           </div>
         </div>
@@ -60,7 +60,6 @@
   </div>
 </div>
 <!-- /RSVP form -->
-
 
 <!-- Menu -->
 <div class="fixed menu">
@@ -80,7 +79,6 @@
   </nav>
 </div>
 <!-- /menu -->
-
 
 <!-- Main container for content -->
 <div class="main-container">
@@ -102,7 +100,7 @@
 
 
   <div class="tip-container tip-right">
-    <div class="tooltip">On December 30th 2012, Caroline messaged Arvin on Ok Cupid for the first time - it was his love of “The Little Mermaid” that did it.</div>
+    <div class="tooltip">Caroline messaged Arvin on OKCupid on Dec 30th, 2012. She was amused by his love of The Little Mermaid.</div>
     <div class="cat icons-pusheen-left"></div>
   </div>
 
@@ -111,15 +109,15 @@
   <div class="small-12 medium-12 large-12 column">
     <div class="row-content text-center">
       <a name="events"></a>
-      <h2 class="mint">Events of the day</h2>
+      <h2 class="mint">Events of the day</h1>
       <div class="icon medium-grey-div"></div>
       <div id="timeline">
         <div class="event">
           <div class="timeline-circle"></div>
-          <h4 class="charcoal time">17:00</h4>
-          <h4 class="red">Doors open at The Spoke Club</h4>
-          <h5>600 King St. W (Portland Room, 2nd floor)</h5>
-          <p>We love this 100 year old building - a block away from our home, no less! </p>
+          <h4 class="charcoal time">5:00pm</h4>
+          <h4 class="red">Doors open at the spoke club</h4>
+          <h5>600 King St. W</h5>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
           <div class="actions">
             <a href="#" class="red"><div class="icon parking"></div> Here's where you can park</a>
             <a href="#" class="red"><div class="icon directions"></div> Get directions to the venue</a>
@@ -128,42 +126,29 @@
 
         <div class="event">
           <div class="timeline-circle"></div>
-          <h4 class="charcoal time">17:30</h4>
-          <h4 class="red">Wedding Ceremony</h4>
-          <h5>The Spoke Club - Portland Room, 2nd floor</h5>
-          <p>Officiated by the lovely Helen Sweet.</p>
+          <h4 class="charcoal time">5:00pm</h4>
+          <h4 class="red">Doors open at the spoke club</h4>
+          <h5>600 King St. W</h5>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
         </div>
 
         <div class="event">
           <div class="timeline-circle"></div>
-          <h4 class="charcoal time">18:00</h4>
-          <h4 class="red">Cocktail time!</h4>
-          <h5>The Spoke Club - Portland Room, 2nd floor</h5>
-          <p>Unless something goes horribly wrong, we will be Mr & Mrs by this point - so let’s start celebrating! We may need to go take a few pictures in the snow, but otherwise, we’ll be getting our cocktail on.</p>
-        </div>
-
-        <div class="event">
-          <div class="timeline-circle"></div>
-          <h4 class="charcoal time">19:30</h4>
-          <h4 class="red">Delicious Dinner Mm Mm Mmmm</h4>
-          <h5>The Spoke Club - Dining Room, 4th floor</h5>
-          <p>Unless something goes horribly wrong, we will be Mr & Mrs by this point - so let’s start celebrating! We may need to go take a few pictures in the snow, but otherwise, we’ll be getting our cocktail on.</p>
-        </div>
-
-        <div class="event">
-          <div class="timeline-circle"></div>
-          <h4 class="charcoal time">21:30</h4>
-          <h4 class="red">Reception & Party</h4>
-          <h5>The Spoke Club - Portland Room, 2nd floor</h5>
-          <p>What to expect: delicious dessert table, funny-moving speeches, ping-pong showdowns and lots of non-injury-inducing-dancing (DJ Agile will bring it)</p>
+          <h4 class="charcoal time">5:00pm</h4>
+          <h4 class="red">Doors open at the spoke club</h4>
+          <h5>600 King St. W</h5>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
         </div>
 
         <div class="event last">
           <div class="timeline-circle"></div>
-          <h4 class="charcoal time">2:30</h4>
-          <h4 class="red">After Party</h4>
-          <h5>TBD</h5>
-          <p>Like a rave of the early 00’s, you will be advised of the location day of.</p>
+          <h4 class="charcoal time">5:00pm</h4>
+          <h4 class="red">Doors open at the spoke club</h4>
+          <h5>600 King St. W</h5>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <div class="actions">
+            <div class="icon menu"></div><a href="#" class="red">Here's where you can park</a>
+          </div>
         </div>
 
       </div>
@@ -174,7 +159,7 @@
 
 
   <div class="tip-container tip-left">
-    <div class="tooltip">On his 33rd birthday, Arvin gave Caroline her engagement ring outside of Jimmy&#x27;s Coffee where they first met.</div>
+    <div class="tooltip">Caroline &amp; Arvin often joke about throwing their cat Paxil &quot;dans la poubelle&quot; when they meet better cats.</div>
     <div class="cat icons-pusheen-right"></div>
   </div>
 
@@ -188,13 +173,13 @@
       <h2 class="gold">Hyatt Regency Toronto</h2>
       <h4 class="white">370 King St. W - <a href="tel:+14163431234" class="tel">(416) 343-1234</a></h4>
       <h5 class="white">$129/Night - 9min Walk to Ceremony</h5>
-      <p class="white">The Hyatt Regency lies in the heart of downtown Toronto and is walking<br/>distance to the ceremony/reception! Please book by November 15th, 2014 using the link below.</p>
+      <p class="white">The Hyatt Regency lies in the heart of downtown Toronto and is walking<br/> distance to the ceremony/reception! Try to book by October 15th, 2014 using link below.</p>
       <p class="white">Parking is avialable at the hotel, or at a number of lots in the area.</p>
       <a target="_BLANK" class="button button-modal" href="https://resweb.passkey.com/Resweb.do?mode=welcome_ei_new&eventID=11750443">
-        <span>Book this Hotel!</span><span>It's great!</span>
+        <span>Book this Hotel!</span><span>la la la</span>
       </a>
       <a target="_BLANK" class="button button-modal secondary" href="https://www.google.ca/maps/dir//Hyatt+Regency+Toronto,+370+King+St+W,+Toronto,+ON+M5V+1J9/@43.646285,-79.391716,17z/data=!4m12!1m3!3m2!1s0x882b34da0ea12bbb:0x7b9bf41770995c2e!2sHyatt+Regency+Toronto!4m7!1m0!1m5!1m1!1s0x882b34da0ea12bbb:0x7b9bf41770995c2e!2m2!1d-79.391716!2d43.646285?hl=en">
-        <span>Get Directions</span><span>It's easy!</span>
+        <span>Get Directions</span><span>la la la</span>
       </a>
     </div>
   </div>
@@ -203,7 +188,7 @@
     <img class="row-image" data-interchange="[images/bg-accomodations2-mobile.jpg, (default)], [images/bg-accomodations2-tablet.jpg, (medium)], [images/bg-accomodations2-desktop.jpg, (large)]">
     <div class="row-content with-background text-center airbnb">
       <a class="button wide button-modal secondary desktop" target="_BLANK" href="https://www.airbnb.ca/s/toronto?checkin=27-12-2014&checkout=29-12-2014&guests=2&sw_lat=43.642299424568215&sw_lng=-79.40611476785625&ne_lat=43.65222511450421&ne_lng=-79.39465637094463&zoom=16&search_by_map=true">
-        <span>Don't like hotels? Try AirBNB</span><span>AirBNB is great!</span>
+        <span>Don't like hotels? Try AirBNB</span><span>la la la</span>
       </a>
     </div>
   </div>
@@ -212,7 +197,7 @@
 
 
   <div class="tip-container tip-right">
-    <div class="tooltip">Because of her never ending antics, Caroline &amp; Arvin often &quot;joke&quot; about throwing Paxil &quot;dans la poubelle&quot;.</div>
+    <div class="tooltip">Caroline and Arvin rate dogs they see on the street from 1-10. There have been many 9&#x27;s but never a 10.</div>
     <div class="cat icons-pusheen-left"></div>
   </div>
 
@@ -226,20 +211,12 @@
       <div class="wondering-item">
         <div class="icon present"></div>
         <h3 class="gold-dark">What about the gifts?</h3>
-        <p>Living in très cool Toronto core, we cultivate a minimalist lifestyle (you kind of have to in 800 square feet). We thought of registering but couldn't come up with anything we needed or wanted. Your presence is our gift, but were you so generous to get us something, we would kindly ask please no boxed gifts.</p>
+        <p>Living the Toronto condo life we cultivate a minimalist lifestyle. We thought about registering but couldn't come up with anything we really needed or wanted. Your presence is our gift, but were you so generous to get us something we would kindly ask please no boxed gifts.</p>
       </div>
       <div class="wondering-item">
         <div class="icon kids"></div>
         <h3 class="gold-dark">What about the kids?</h3>
-        <p>We recognize that a number of our friends and family who are traveling from out of town have little ones. The venue we've chosen isn't well suited for kids so we are opting for an adult only event. Please advise us in advance if this poses a problem and we will help arrange alternate plans at the wedding.</p>
-      </div>
-      <div class="wondering-item">
-        <div class="icon present"></div>
-        <h3 class="gold-dark">What about the bridal parties?</h3>
-        <p>We decided to each choose one friend to stand by our sides on this day. Oh, and an exquisite little girl to throw some flowers!<p>
-        <p><strong>Ben Van Dongen</strong> - Best man & witness. “I met Ben in grade 9 and he’s been my brother from another mother since.“ - Arvin.</p>
-        <p><strong>Justine Noiseux</strong> - Maid of honor & witness. “I’ve known this beautiful girl since 1992 - She has the biggest, kindest heart of anyone I know. And she’s always made me laugh till i pee.” - Caroline</p>
-        <p><strong>Lou Habib</strong> as the Flower girl. “Every morning, we wake up to her exquisite rendition of the classic “I like to move it” as our alarm clock tone. Of course she’s our flower girl” - Caroline  & Arvin</p>
+        <p>Living the Toronto condo life we cultivate a minimalist lifestyle. We thought about registering but couldn't come up with anything we really needed or wanted. Your presence is our gift, but were you so generous to get us something we would kindly ask please no boxed gifts.</p>
       </div>
     </div>
   </div>
@@ -248,7 +225,7 @@
 
 
   <div class="tip-container tip-left">
-    <div class="tooltip">Arvin &amp; Caroline are contemplating getting a rabbit as a pet because rumour has it, they can be litter trained.</div>
+    <div class="tooltip">Arvin gets Caroline flowers every time she comes back from a trip. A tradition that started when she broke her arms.</div>
     <div class="cat icons-pusheen-right"></div>
   </div>
 
@@ -265,29 +242,15 @@
         <li class="slide-queen">
           <img class="row-image" data-interchange="[images/bg-slide1-mobile.jpg, (default)], [images/bg-slide1-tablet.jpg, (medium)], [images/bg-slide1-desktop.jpg, (large)]">
           <div class="slide-wrapper">
-            <h2 class="gold">#1 Shopping on Queen Street West</h2>
-            <p class="white show-for-medium-up">Men and women clothing stores are hard to resist on this trip! The best shopping is between Bathurst and Bellwoods.</p>
+            <h2 class="gold">#1 Shopping on the most awesome Queen Street</h2>
+            <p class="white show-for-medium-up">Living the Toronto condo life we cultivate a minimalist lifestyle. We thought about registering but couldn't come up with anything we really needed or wanted. Your presence is our gift, but were you so generous to get us something we would kindly ask please no boxed gifts.</p>
           </div>
         </li>
-        <li class="slide-ripleys">
+        <li class="slide-cntower">
           <img class="row-image" data-interchange="[images/bg-slide1-mobile.jpg, (default)], [images/bg-slide1-tablet.jpg, (medium)], [images/bg-slide1-desktop.jpg, (large)]">
           <div class="slide-wrapper">
-            <h2 class="gold">#2 Ripleys Aquarium of Canada</h2>
-            <p class="white show-for-medium-up">Recently opened, this aquarium is tons of fun - especially for families. You can even pet a stingray! What!</p>
-          </div>
-        </li>
-        <li class="slide-tiff">
-          <img class="row-image" data-interchange="[images/bg-slide1-mobile.jpg, (default)], [images/bg-slide1-tablet.jpg, (medium)], [images/bg-slide1-desktop.jpg, (large)]">
-          <div class="slide-wrapper">
-            <h2 class="gold">#3 TIFF Bell Lightbox</h2>
-            <p class="white show-for-medium-up">The mecca of the Toronto Film Festival! If you have a few hours to spare in a dark room, this place hosts the best of art house cinema. Also, they are hosting a <a href="http://www.tiff.net/exhibitions/upcoming-exhibitions/stanley-kubrick-exhibition" target="_BLANK">Stanley Kubrick</a> exhibition!</p>
-          </div>
-        </li>
-        <li class="slide-ago">
-          <img class="row-image" data-interchange="[images/bg-slide1-mobile.jpg, (default)], [images/bg-slide1-tablet.jpg, (medium)], [images/bg-slide1-desktop.jpg, (large)]">
-          <div class="slide-wrapper">
-            <h2 class="gold">#4 AGO (Art Gallery of Ontario)</h2>
-            <p class="white show-for-medium-up">One of Toronto’s most prestigious art galleries, hosting a number a fascinating exhibits. Always a great visit.</p>
+            <h2 class="gold">#1 Shopping on the most awesome Queen Street</h2>
+            <p class="white show-for-medium-up">Living the Toronto condo life we cultivate a minimalist lifestyle. We thought about registering but couldn't come up with anything we really needed or wanted. Your presence is our gift, but were you so generous to get us something we would kindly ask please no boxed gifts.</p>
           </div>
         </li>
       </ul>
@@ -298,7 +261,7 @@
 
 
   <div class="tip-container tip-right">
-    <div class="tooltip">3 months into their blossoming relationship, Caroline fractured both her elbows and Arvin didn’t run for the hills!</div>
+    <div class="tooltip">Caroline has more photos of random animals on her phone than she does of Arvin.</div>
     <div class="cat icons-pusheen-left"></div>
   </div>
 
@@ -313,6 +276,10 @@
         <h3 class="gold-dark">Email us at rsvp@singlahabib.com</h3>
       </div>
       <div class="contact-item">
+        <div class="icon twitter"></div>
+        <h3 class="gold-dark">Tweet us at #singlahabib</h3>
+      </div>
+      <div class="contact-item">
         <div class="icon insta"></div>
         <h3 class="gold-dark">Snap pics and tag us at #singlahabib</h3>
       </div>
@@ -323,7 +290,7 @@
 
 
   <div class="tip-container tip-left">
-    <div class="tooltip">Caroline &amp; Arvin love ping pong (a lot) and will challenge you at the wedding.</div>
+    <div class="tooltip">Arvin held an intervention for Caroline&#x27;s crippiling plastic bag addiction. Progress is slow but ongoing.</div>
     <div class="cat icons-pusheen-right"></div>
   </div>
 

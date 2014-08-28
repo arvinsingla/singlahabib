@@ -5,8 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <meta name="format-detection" content="telephone=no" />
     <title>Caroline &amp; Arvin are getting married in Toronto!</title>
-    <link rel="stylesheet" href="stylesheets/app.css" />
+    <!-- build:css stylesheets/app.css -->
+<link rel="stylesheet" href="stylesheets/app.css" />
 <link rel="stylesheet" href="bower_components/flexslider/flexslider.css" />
+<!-- endbuild -->
 
   </head>
   <body>
@@ -17,7 +19,7 @@
 
 <!-- RSVP form -->
 <div id="rsvp" class="row">
-  <div class="icon close"></div>
+  <a href="#" class="rsvp-close">Close</a>
   <div class="small-12 medium-6 large-4 large-centered medium-centered columns">
     <div class="row-content text-center">
       <form id="rsvp-form" data-parsley-validate>
@@ -46,10 +48,10 @@
 
         <div id="plusone-details">
           <h3>Your guest details</h3>
-          <input type="text" placeholder="Full Name" name="plusone-name" required data-parsley-errors-messages-disabled data-parsley-group='["going-plusone"]'/>
+          <input type="text" placeholder="Full Name" name="guest-name" required data-parsley-errors-messages-disabled data-parsley-group='["going-plusone"]'/>
           <div class="radio-group three-items form-group" id="plusone-meal">
             <input type="radio" name="plusone-meal" value="beef" id="plusone-meal-beef" required data-parsley-errors-messages-disabled data-parsley-group='["going-plusone"]'><label for="plusone-meal-beef">Beef</label>
-            <input type="radio" name="plusone-meal" value="fish" id="plusone-meal-fish" required><label for="plusone-meal-fish">Fish</label>
+            <input type="radio" name="plusone-meal" value="fish" id="plusone-meal-fish" required><label for="plusone-meal-fish">fish</label>
             <input type="radio" name="plusone-meal" value="vegetarian" id="plusone-meal-vegetarian" required><label for="plusone-meal-vegetarian">Vegetarian</label>
           </div>
         </div>
@@ -343,7 +345,8 @@
 
 </div>
 
-    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <!-- build:js js/app.js -->
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
 <script src="bower_components/foundation/js/foundation.min.js"></script>
 <script src="bower_components/jquery-waypoints/waypoints.min.js"></script>
 <script src="bower_components/fastclick/lib/fastclick.js"></script>
@@ -351,6 +354,7 @@
 <script src="bower_components/parsleyjs/dist/parsley.js"></script>
 <script src="js/jquery.arctext.js"></script>
 <script src="js/app.js"></script>
+<!-- endbuild -->
 <script type="text/javascript" src="//use.typekit.net/nhd4jiy.js"></script>
 <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 <script>
