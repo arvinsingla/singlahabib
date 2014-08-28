@@ -32,8 +32,8 @@
   }
   .rsvp-close {
     position: absolute;
-    right: rem-calc(50px);
-    top: rem-calc(50px);
+    right: rem-calc(20px);
+    top: rem-calc(20px);
     z-index: 1005;
     text-indent: rem-calc(-9999px);
   }
@@ -53,6 +53,10 @@
     padding: rem-calc(50px);
     &.open {
       -webkit-transform: translate3d(0, 0, 0);
+    }
+    .rsvp-close {
+      right: rem-calc(50px);
+      top: rem-calc(50px);
     }
   }
 }

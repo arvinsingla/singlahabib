@@ -11,7 +11,7 @@ module.exports = function(grunt) {
         layout: 'templates/layouts/default.hbs',
         data: ['templates/data/*.{json,yml}']
       },
-      pages: {
+      site: {
         src: 'templates/pages/*.hbs',
         dest: './'
       }
@@ -19,19 +19,31 @@ module.exports = function(grunt) {
     useminPrepare: {
       html: './index.html',
       options: {
-        dest: './'
+        dest: './dist'
       }
     },
     usemin: {
       html: './index.html',
+    },
+    copy: {
+      main: {
+        files: [
+          { expand: true, src: ['index.html'], dest: 'dist/', filter: 'isFile' },
+          { expand: true, src: ['images/*'], dest: 'dist/', filter: 'isFile' },
+          { expand: true, src: ['misc/*'], dest: 'dist/',  filter: 'isFile' },
+          { expand: true, src: ['fonts/*'], dest: 'dist/stylesheets/',  filter: 'isFile' },
+          { expand: true, cwd: 'bower_components/flexslider/', src: ['fonts/**'], dest: 'dist/stylesheets/',  filter: 'isFile' }
+        ]
+      }
     }
   });
 
   grunt.loadNpmTasks('assemble');
+  grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-usemin');
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.registerTask('default', ['assemble']);
-  grunt.registerTask('prod', ['assemble', 'useminPrepare', 'usemin', 'concat', 'uglify', 'cssmin']);
+  grunt.registerTask('prod', ['assemble', 'useminPrepare', 'usemin', 'concat', 'uglify', 'cssmin', 'copy']);
 };
