@@ -1,6 +1,6 @@
 <!-- RSVP form -->
 <div id="rsvp" class="row">
-  <div class="icon close"></div>
+  <a href="#" class="rsvp-close icon close">Close</a>
   <div class="small-12 medium-6 large-4 large-centered medium-centered columns">
     <div class="row-content text-center">
       <form id="rsvp-form" data-parsley-validate>
@@ -12,7 +12,7 @@
         </div>
         <div class="radio-group two-items form-group plusone">
           <input type="radio" name="plusone" value="yes" id="plusone" required data-parsley-errors-messages-disabled data-parsley-group='["going", "going-plusone"]'><label for="plusone">I'm bringing someone</label>
-          <input type="radio" name="plusone" value="no" id="no-plusone" required><label for="no-plusone">I'm fyling solo</label>
+          <input type="radio" name="plusone" value="no" id="no-plusone" required><label for="no-plusone">I'm flying solo</label>
         </div>
 
         <div id="your-details">
@@ -22,7 +22,7 @@
           <input id="guest-notes" class="your-details-going" type="textarea" placeholder="Allergies / Special considerations" name="guest-notes"/>
           <div class="radio-group three-items form-group your-details-going" id="guest-meal">
             <input type="radio" name="guest-meal" value="beef" id="guest-meal-beef" required data-parsley-errors-messages-disabled data-parsley-group='["going", "going-plusone"]'><label for="guest-meal-beef">Beef</label>
-            <input type="radio" name="guest-meal" value="chicken" id="guest-meal-fish" required><label for="guest-meal-fish">Fish</label>
+            <input type="radio" name="guest-meal" value="fish" id="guest-meal-fish" required><label for="guest-meal-fish">Fish</label>
             <input type="radio" name="guest-meal" value="vegetarian" id="guest-meal-vegetarian" required><label for="guest-meal-vegetarian">Vegetarian</label>
           </div>
         </div>
@@ -39,6 +39,15 @@
 
         <input type="submit" name="rsvp-submit" class="form-group" value="Confirm your reservation">
       </form>
+
+      <div id="rsvp-thankyou" class="hide">
+        <div class="icon checkmark"></div>
+        <h3>Thank you for RSVPing</h3>
+      </div>
+      <div id="rsvp-error" class="hide">
+        <div class="icon close"></div>
+        <h3>An error occurred. Please reload the page and try again.</h3>
+      </div>
     </div>
   </div>
 </div>

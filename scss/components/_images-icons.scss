@@ -54,14 +54,14 @@
   }
   &.weddingparty {
     @include icons-sprite(icon-weddingparty);
-    @include resize-sprite($icons-sprites, icon-menu, 50);
+    @include resize-sprite($icons-sprites, icon-weddingparty, 50);
   }
   &.checkmark {
     @include icons-sprite(icon-checkmark);
-    @include resize-sprite($icons-sprites, icon-menu, 50);
+    @include resize-sprite($icons-sprites, icon-checkmark, 50);
   }
   &.close {
     @include icons-sprite(icon-close);
-    @include resize-sprite($icons-sprites, icon-menu, 50);
+    @include resize-sprite($icons-sprites, icon-close, 50);
   }
 }

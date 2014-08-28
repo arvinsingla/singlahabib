@@ -5,8 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <meta name="format-detection" content="telephone=no" />
     <title>Caroline &amp; Arvin are getting married in Toronto!</title>
-    <link rel="stylesheet" href="stylesheets/app.css" />
+    <!-- build:css stylesheets/app-dist.css -->
+<link rel="stylesheet" href="stylesheets/app.css" />
 <link rel="stylesheet" href="bower_components/flexslider/flexslider.css" />
+<!-- endbuild -->
 
   </head>
   <body>
@@ -17,7 +19,7 @@
 
 <!-- RSVP form -->
 <div id="rsvp" class="row">
-  <div class="icon close"></div>
+  <a href="#" class="rsvp-close icon close">Close</a>
   <div class="small-12 medium-6 large-4 large-centered medium-centered columns">
     <div class="row-content text-center">
       <form id="rsvp-form" data-parsley-validate>
@@ -29,7 +31,7 @@
         </div>
         <div class="radio-group two-items form-group plusone">
           <input type="radio" name="plusone" value="yes" id="plusone" required data-parsley-errors-messages-disabled data-parsley-group='["going", "going-plusone"]'><label for="plusone">I'm bringing someone</label>
-          <input type="radio" name="plusone" value="no" id="no-plusone" required><label for="no-plusone">I'm fyling solo</label>
+          <input type="radio" name="plusone" value="no" id="no-plusone" required><label for="no-plusone">I'm flying solo</label>
         </div>
 
         <div id="your-details">
@@ -39,7 +41,7 @@
           <input id="guest-notes" class="your-details-going" type="textarea" placeholder="Allergies / Special considerations" name="guest-notes"/>
           <div class="radio-group three-items form-group your-details-going" id="guest-meal">
             <input type="radio" name="guest-meal" value="beef" id="guest-meal-beef" required data-parsley-errors-messages-disabled data-parsley-group='["going", "going-plusone"]'><label for="guest-meal-beef">Beef</label>
-            <input type="radio" name="guest-meal" value="chicken" id="guest-meal-fish" required><label for="guest-meal-fish">Fish</label>
+            <input type="radio" name="guest-meal" value="fish" id="guest-meal-fish" required><label for="guest-meal-fish">Fish</label>
             <input type="radio" name="guest-meal" value="vegetarian" id="guest-meal-vegetarian" required><label for="guest-meal-vegetarian">Vegetarian</label>
           </div>
         </div>
@@ -56,6 +58,15 @@
 
         <input type="submit" name="rsvp-submit" class="form-group" value="Confirm your reservation">
       </form>
+
+      <div id="rsvp-thankyou" class="hide">
+        <div class="icon checkmark"></div>
+        <h3>Thank you for RSVPing</h3>
+      </div>
+      <div id="rsvp-error" class="hide">
+        <div class="icon close"></div>
+        <h3>An error occurred. Please reload the page and try again.</h3>
+      </div>
     </div>
   </div>
 </div>
@@ -73,7 +84,7 @@
     <ul id="menu-items">
       <li><a href="#events">Events of the Day</a></li>
       <li><a href="#accommodation">Accommodations</a></li>
-      <li><a href="#wondering">Wonderings</a></li>
+      <li><a href="#wondering">FAQ</a></li>
       <li><a href="#thingstodo">Things to do</a></li>
       <li><a href="#" class="menu-rsvp" data-modal="rsvp">RSVP</a></li>
     </ul>
@@ -147,7 +158,7 @@
           <h4 class="charcoal time">19:30</h4>
           <h4 class="red">Delicious Dinner Mm Mm Mmmm</h4>
           <h5>The Spoke Club - Dining Room, 4th floor</h5>
-          <p>Unless something goes horribly wrong, we will be Mr & Mrs by this point - so let’s start celebrating! We may need to go take a few pictures in the snow, but otherwise, we’ll be getting our cocktail on.</p>
+          <p>We are very excited about this special Spoke menu, with a mix of Indian and Western flavors, you shan’t be disappointed.</p>
         </div>
 
         <div class="event">
@@ -233,13 +244,13 @@
         <h3 class="gold-dark">What about the kids?</h3>
         <p>We recognize that a number of our friends and family who are traveling from out of town have little ones. The venue we've chosen isn't well suited for kids so we are opting for an adult only event. Please advise us in advance if this poses a problem and we will help arrange alternate plans at the wedding.</p>
       </div>
-      <div class="wondering-item">
-        <div class="icon present"></div>
-        <h3 class="gold-dark">What about the bridal parties?</h3>
-        <p>We decided to each choose one friend to stand by our sides on this day. Oh, and an exquisite little girl to throw some flowers!<p>
-        <p><strong>Ben Van Dongen</strong> - Best man & witness. “I met Ben in grade 9 and he’s been my brother from another mother since.“ - Arvin.</p>
-        <p><strong>Justine Noiseux</strong> - Maid of honor & witness. “I’ve known this beautiful girl since 1992 - She has the biggest, kindest heart of anyone I know. And she’s always made me laugh till i pee.” - Caroline</p>
-        <p><strong>Lou Habib</strong> as the Flower girl. “Every morning, we wake up to her exquisite rendition of the classic “I like to move it” as our alarm clock tone. Of course she’s our flower girl” - Caroline  & Arvin</p>
+      <div class="wondering-item wedding-party">
+        <div class="icon weddingparty"></div>
+        <h3 class="gold-dark">What about the wedding party?</h3>
+        <p>We decided to each choose one friend to stand by our sides on this day. Oh, and an exquisite little girl to throw some flowers!</p>
+        <p><strong>Ben Van Dongen</strong> - Best man & witness<br/> “I met Ben in grade 9 and he’s been my brother from another mother since.“ - Arvin.</p>
+        <p><strong>Justine Noiseux</strong> - Maid of honor & witness<br/> “I’ve known this beautiful girl since 1992 - She has the biggest, kindest heart of anyone I know. And she’s always made me laugh till i pee.” - Caroline</p>
+        <p><strong>Lou Habib</strong> - The Flower girl<br/>“Every morning, we wake up to her exquisite rendition of the classic <a href="misc/move-it-move-it.mp3" target="_BLANK">"I like to move it"</a> as our alarm clock tone. Of course she’s our flower girl” - Caroline  & Arvin</p>
       </div>
     </div>
   </div>
@@ -270,21 +281,21 @@
           </div>
         </li>
         <li class="slide-ripleys">
-          <img class="row-image" data-interchange="[images/bg-slide1-mobile.jpg, (default)], [images/bg-slide1-tablet.jpg, (medium)], [images/bg-slide1-desktop.jpg, (large)]">
+          <img class="row-image" data-interchange="[images/bg-slide3-mobile.jpg, (default)], [images/bg-slide3-tablet.jpg, (medium)], [images/bg-slide3-desktop.jpg, (large)]">
           <div class="slide-wrapper">
             <h2 class="gold">#2 Ripleys Aquarium of Canada</h2>
             <p class="white show-for-medium-up">Recently opened, this aquarium is tons of fun - especially for families. You can even pet a stingray! What!</p>
           </div>
         </li>
         <li class="slide-tiff">
-          <img class="row-image" data-interchange="[images/bg-slide1-mobile.jpg, (default)], [images/bg-slide1-tablet.jpg, (medium)], [images/bg-slide1-desktop.jpg, (large)]">
+          <img class="row-image" data-interchange="[images/bg-slide4-mobile.jpg, (default)], [images/bg-slide4-tablet.jpg, (medium)], [images/bg-slide4-desktop.jpg, (large)]">
           <div class="slide-wrapper">
             <h2 class="gold">#3 TIFF Bell Lightbox</h2>
             <p class="white show-for-medium-up">The mecca of the Toronto Film Festival! If you have a few hours to spare in a dark room, this place hosts the best of art house cinema. Also, they are hosting a <a href="http://www.tiff.net/exhibitions/upcoming-exhibitions/stanley-kubrick-exhibition" target="_BLANK">Stanley Kubrick</a> exhibition!</p>
           </div>
         </li>
         <li class="slide-ago">
-          <img class="row-image" data-interchange="[images/bg-slide1-mobile.jpg, (default)], [images/bg-slide1-tablet.jpg, (medium)], [images/bg-slide1-desktop.jpg, (large)]">
+          <img class="row-image" data-interchange="[images/bg-slide2-mobile.jpg, (default)], [images/bg-slide2-tablet.jpg, (medium)], [images/bg-slide2-desktop.jpg, (large)]">
           <div class="slide-wrapper">
             <h2 class="gold">#4 AGO (Art Gallery of Ontario)</h2>
             <p class="white show-for-medium-up">One of Toronto’s most prestigious art galleries, hosting a number a fascinating exhibits. Always a great visit.</p>
@@ -343,7 +354,8 @@
 
 </div>
 
-    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <!-- build:js js/app-dist.js -->
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
 <script src="bower_components/foundation/js/foundation.min.js"></script>
 <script src="bower_components/jquery-waypoints/waypoints.min.js"></script>
 <script src="bower_components/fastclick/lib/fastclick.js"></script>
@@ -351,6 +363,7 @@
 <script src="bower_components/parsleyjs/dist/parsley.js"></script>
 <script src="js/jquery.arctext.js"></script>
 <script src="js/app.js"></script>
+<!-- endbuild -->
 <script type="text/javascript" src="//use.typekit.net/nhd4jiy.js"></script>
 <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 <script>

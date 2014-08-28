@@ -60,7 +60,8 @@
     }
     &.expand {
       .cat {
-        @include transform(rotate(60deg) translate3d(rem-calc(-85px),rem-calc(54px),0));
+        @include transform(rotate(40deg) translate3d(-5.3125rem, 0.375rem, 0));
+        //@include transform(rotate(60deg) translate3d(rem-calc(-85px),rem-calc(54px),0));
       }
       .tooltip {
         opacity: 1;
@@ -87,7 +88,8 @@
     }
     &.expand {
       .cat {
-        @include transform(rotate(-60deg) translate3d(rem-calc(85px),rem-calc(54px),0));
+        @include transform(rotate(-40deg) translate3d(5.3125rem, 0.375rem, 0));
+        //@include transform(rotate(-60deg) translate3d(rem-calc(85px),rem-calc(54px),0));
       }
       .tooltip {
         opacity: 1;

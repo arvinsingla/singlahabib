@@ -248,6 +248,16 @@ body {
       margin: 0;
       padding: 0;
     }
+    &.wedding-party {
+      p {
+        padding: rem-calc(10px) 0;
+      }
+    }
+  }
+  a:link,
+  a:visited {
+    color: $red;
+    font-size: inherit;
   }
 }
 
@@ -291,6 +301,10 @@ body {
           margin: 0;
           padding: 0;
           line-height: rem-calc(50px);
+        }
+        a:link,
+        a:visited {
+          color: $mint;
         }
       }
     }

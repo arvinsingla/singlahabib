@@ -146,8 +146,6 @@ FastClick.attach(document.body);
 
     if (valid) {
       mailCurrentForm(going, plusone);
-    } else {
-      // @todo handle error
     }
   });
 
@@ -197,11 +195,16 @@ FastClick.attach(document.body);
       }
     })
     .done(function(response) {
-      //document.cookie="rsvp=true";
-      $("a.rsvp-close").trigger('click');
+      document.cookie="rsvp=true";
+      $("#rsvp form").hide();
+      $('#rsvp-thankyou').removeClass("hide");
+      setTimeout(function(){
+        $("a.rsvp-close").trigger('click');
+      }, 1500);
     })
     .fail(function(response) {
-      alert('Error sending message.');
+      $("#rsvp form").hide();
+      $('#rsvp-error').removeClass("hide");
     });
   }
 
@@ -221,6 +224,11 @@ FastClick.attach(document.body);
     $('.flexslider').flexslider({
       animation: "slide"
     });
+    var myCookie = document.cookie.replace(/(?:(?:^|.*;\s*)rsvp\s*\=\s*([^;]*).*$)|^.*$/, "$1");
+    if (myCookie) {
+      $('#rsvp form').hide();
+      $('#rsvp-thankyou').removeClass('hide');
+    }
   });
 
 }(jQuery));
