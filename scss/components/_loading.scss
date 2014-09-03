@@ -55,3 +55,9 @@
     -webkit-transform: scale(1.0);
   }
 }
+
+@media #{$small-only} {
+  .loading-container {
+    left: 43%;
+  }
+}

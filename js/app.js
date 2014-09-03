@@ -242,7 +242,7 @@ FastClick.attach(document.body);
       $('#rsvp-thankyou').removeClass('hide');
     }
     // Add the loaded class when the page has fully loaded.
-    $('body').addClass('loaded');
+    //$('body').addClass('loaded');
   });
 
 }(jQuery));
