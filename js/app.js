@@ -221,8 +221,6 @@ FastClick.attach(document.body);
    */
   // Events to fire when the page has fully loaded.
   $(window).bind("load", function() {
-    // Add the loaded class when the page has fully loaded.
-    $('body').addClass('loaded');
     // Curve the main intro text on an arc
     $("h1.intro-title").arctext({radius: 2500});
     $("h2.intro-title").arctext({radius: 1000});
@@ -243,6 +241,8 @@ FastClick.attach(document.body);
       $('#rsvp form').hide();
       $('#rsvp-thankyou').removeClass('hide');
     }
+    // Add the loaded class when the page has fully loaded.
+    $('body').addClass('loaded');
   });
 
 }(jQuery));
