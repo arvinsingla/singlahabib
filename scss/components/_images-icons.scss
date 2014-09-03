@@ -1,5 +1,8 @@
 .icon {
   margin: 0 auto;
+  @include translateZ(0);
+  @include backface-visibility(hidden);
+  @include perspective(1000);
   &.logo-desktop {
     @include icons-sprite(icon-logo-desktop);
     @include resize-sprite($icons-sprites, icon-logo-desktop, 50);
