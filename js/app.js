@@ -203,8 +203,8 @@ FastClick.attach(document.body);
     .done(function(response) {
       document.cookie="rsvp=true";
       $.ladda( 'stopAll' );
-      $("#rsvp form").addClass('success');
-      $('#rsvp-thankyou').removeClass("hide");
+      $("#rsvp form").addClass('hide');
+      $('#rsvp-thankyou').addClass('animate-in');
       setTimeout(function(){
         $("a.rsvp-close").trigger('click');
       }, 1500);
@@ -212,7 +212,7 @@ FastClick.attach(document.body);
     .fail(function(response) {
       $.ladda( 'stopAll' );
       $("#rsvp form").hide();
-      $('#rsvp-error').removeClass("hide");
+      $('#rsvp-error').addClass("animate-in");
     });
   }
 
