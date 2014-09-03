@@ -120,8 +120,11 @@ FastClick.attach(document.body);
     }
   });
 
+  // Ladda instantiation for button animation.
+  var l = $('#rsvp button.rsvp-submit').ladda();
+
   // Submit button handler for validation.
-  $("#rsvp input[name='rsvp-submit']").click(function(e) {
+  $("#rsvp button.rsvp-submit").click(function(e) {
     e.preventDefault();
     var going = $('input[name=going]:checked', '#rsvp').val();
     var plusone = $('input[name=plusone]:checked').val();
@@ -150,6 +153,9 @@ FastClick.attach(document.body);
   });
 
   var mailCurrentForm = function(going, plusone) {
+    // Start the button animation.
+    l.ladda( 'start' );
+    // Initialize the text variables.
     var email = "rsvp@singlahabib.com";
     var name = $('input[name=guest-name]', '#rsvp').val();
     var subject = "RSVP from " + name;
@@ -196,13 +202,15 @@ FastClick.attach(document.body);
     })
     .done(function(response) {
       document.cookie="rsvp=true";
-      $("#rsvp form").hide();
+      $.ladda( 'stopAll' );
+      $("#rsvp form").addClass('success');
       $('#rsvp-thankyou').removeClass("hide");
       setTimeout(function(){
         $("a.rsvp-close").trigger('click');
       }, 1500);
     })
     .fail(function(response) {
+      $.ladda( 'stopAll' );
       $("#rsvp form").hide();
       $('#rsvp-error').removeClass("hide");
     });
@@ -222,7 +230,13 @@ FastClick.attach(document.body);
     initializeCats();
     // Initialize the slider
     $('.flexslider').flexslider({
-      animation: "slide"
+      animation: "slide",
+      pauseOnAction: true,
+      pauseOnHover: true,
+      useCSS: true,
+      start: function() {
+        $.waypoints('refresh');
+      }
     });
     var myCookie = document.cookie.replace(/(?:(?:^|.*;\s*)rsvp\s*\=\s*([^;]*).*$)|^.*$/, "$1");
     if (myCookie) {

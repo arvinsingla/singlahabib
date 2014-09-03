@@ -1,6 +1,17 @@
 <!-- RSVP form -->
 <div id="rsvp" class="row">
+
   <a href="#" class="rsvp-close icon close">Close</a>
+
+  <div id="rsvp-thankyou" class="hide">
+    <div class="icon checkmark"></div>
+    <h3>Thank you for RSVPing</h3>
+  </div>
+  <div id="rsvp-error" class="hide">
+    <h3>An error occurred :(<h3>
+    <h4>Please reload the page and try again.</h4>
+  </div>
+
   <div class="small-12 medium-6 large-4 large-centered medium-centered columns">
     <div class="row-content text-center">
       <form id="rsvp-form" data-parsley-validate>
@@ -37,17 +48,10 @@
           </div>
         </div>
 
-        <input type="submit" name="rsvp-submit" class="form-group" value="Confirm your reservation">
+        <button class="form-group ladda-button rsvp-submit" data-style="expand-left">
+          <span class="ladda-label">Confirm your reservation</span>
+        </button>
       </form>
-
-      <div id="rsvp-thankyou" class="hide">
-        <div class="icon checkmark"></div>
-        <h3>Thank you for RSVPing</h3>
-      </div>
-      <div id="rsvp-error" class="hide">
-        <div class="icon close"></div>
-        <h3>An error occurred. Please reload the page and try again.</h3>
-      </div>
     </div>
   </div>
 </div>

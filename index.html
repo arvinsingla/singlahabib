@@ -5,7 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <meta name="format-detection" content="telephone=no" />
     <title>Caroline &amp; Arvin are getting married in Toronto!</title>
-    <link rel="stylesheet" href="stylesheets/app-dist.css">
+    <!-- build:css stylesheets/app-dist.css -->
+<link rel="stylesheet" href="stylesheets/app.css" />
+<link rel="stylesheet" href="bower_components/flexslider/flexslider.css" />
+<link rel="stylesheet" href="bower_components/ladda/dist/ladda-themeless.min.css" />
+<!-- endbuild -->
 
   </head>
   <body>
@@ -16,7 +20,18 @@
 
 <!-- RSVP form -->
 <div id="rsvp" class="row">
+
   <a href="#" class="rsvp-close icon close">Close</a>
+
+  <div id="rsvp-thankyou" class="hide">
+    <div class="icon checkmark"></div>
+    <h3>Thank you for RSVPing</h3>
+  </div>
+  <div id="rsvp-error" class="hide">
+    <h3>An error occurred :(<h3>
+    <h4>Please reload the page and try again.</h4>
+  </div>
+
   <div class="small-12 medium-6 large-4 large-centered medium-centered columns">
     <div class="row-content text-center">
       <form id="rsvp-form" data-parsley-validate>
@@ -53,17 +68,10 @@
           </div>
         </div>
 
-        <input type="submit" name="rsvp-submit" class="form-group" value="Confirm your reservation">
+        <button class="form-group ladda-button rsvp-submit" data-style="expand-left">
+          <span class="ladda-label">Confirm your reservation</span>
+        </button>
       </form>
-
-      <div id="rsvp-thankyou" class="hide">
-        <div class="icon checkmark"></div>
-        <h3>Thank you for RSVPing</h3>
-      </div>
-      <div id="rsvp-error" class="hide">
-        <div class="icon close"></div>
-        <h3>An error occurred. Please reload the page and try again.</h3>
-      </div>
     </div>
   </div>
 </div>
@@ -126,11 +134,15 @@
           <div class="timeline-circle"></div>
           <h4 class="charcoal time">17:00</h4>
           <h4 class="red">Doors open at The Spoke Club</h4>
-          <h5>600 King St. W (Portland Room, 2nd floor)</h5>
-          <p>We love this 100 year old building - a block away from our home, no less! </p>
+          <h5>600 King St. W</h5>
+          <p>We love this centennial building nestled at the corner of King and Portland. It's a members only club, but don't worry we can get you in. </p>
           <div class="actions">
-            <a href="#" class="red"><div class="icon parking"></div> Here's where you can park</a>
-            <a href="#" class="red"><div class="icon directions"></div> Get directions to the venue</a>
+            <a href="http://parking.greenp.com/find-parking/?i=king+%26+portland&x=0&y=0" target="_BLANK" class="red">
+              <div class="icon parking"></div> Here's where you can park
+            </a>
+            <a href="https://www.google.ca/maps/place/The+Spoke+Club/@43.64457,-79.399944,17z/data=!3m1!4b1!4m2!3m1!1s0x882b34def673d261:0x14a3288d0069f22b?hl=en" target="_BLANK" class="red">
+              <div class="icon directions"></div> Get directions to the venue
+            </a>
           </div>
         </div>
 
@@ -139,7 +151,7 @@
           <h4 class="charcoal time">17:30</h4>
           <h4 class="red">Wedding Ceremony</h4>
           <h5>The Spoke Club - Portland Room, 2nd floor</h5>
-          <p>Officiated by the lovely Helen Sweet.</p>
+          <p>Officiated by the lovely Helen Sweet. The most important 30 minutes of the day (our lives). Don't miss it!</p>
         </div>
 
         <div class="event">
@@ -153,9 +165,9 @@
         <div class="event">
           <div class="timeline-circle"></div>
           <h4 class="charcoal time">19:30</h4>
-          <h4 class="red">Delicious Dinner Mm Mm Mmmm</h4>
+          <h4 class="red">Delicious Dinner</h4>
           <h5>The Spoke Club - Dining Room, 4th floor</h5>
-          <p>We are very excited about this special Spoke menu, with a mix of Indian and Western flavors, you shan’t be disappointed.</p>
+          <p>We are excited about this specially tailored Spoke menu, with a mix of Indian and Western flavors, you shan’t be disappointed.</p>
         </div>
 
         <div class="event">
@@ -163,7 +175,7 @@
           <h4 class="charcoal time">21:30</h4>
           <h4 class="red">Reception & Party</h4>
           <h5>The Spoke Club - Portland Room, 2nd floor</h5>
-          <p>What to expect: delicious dessert table, funny-moving speeches, ping-pong showdowns and lots of non-injury-inducing-dancing (DJ Agile will bring it)</p>
+          <p>What to expect: delicious desserts, funny/moving speeches, ping-pong showdowns and lots of non-injury-inducing-dancing.</p>
         </div>
 
         <div class="event last">
@@ -186,6 +198,11 @@
     <div class="cat icons-pusheen-right"></div>
   </div>
 
+  <div class="tip-container tip-right">
+    <div class="tooltip">Because of her never ending antics, Caroline &amp; Arvin often &quot;joke&quot; about throwing Paxil &quot;dans la poubelle&quot;.</div>
+    <div class="cat icons-pusheen-left"></div>
+  </div>
+
   <!-- Accommodations content -->
 <div id="accommodation" class="row">
   <!-- Hotel -->
@@ -197,12 +214,12 @@
       <h4 class="white">370 King St. W - <a href="tel:+14163431234" class="tel">(416) 343-1234</a></h4>
       <h5 class="white">$129/Night - 9min Walk to Ceremony</h5>
       <p class="white">The Hyatt Regency lies in the heart of downtown Toronto and is walking<br/>distance to the ceremony/reception! Please book by November 15th, 2014 using the link below.</p>
-      <p class="white">Parking is avialable at the hotel, or at a number of lots in the area.</p>
+      <p class="white">Parking is available at the hotel, or at a number of lots in the area.</p>
       <a target="_BLANK" class="button button-modal" href="https://resweb.passkey.com/Resweb.do?mode=welcome_ei_new&eventID=11750443">
-        <span>Book this Hotel!</span><span>It's great!</span>
+        <span>Book this Hotel!</span><span>What a deal!</span>
       </a>
       <a target="_BLANK" class="button button-modal secondary" href="https://www.google.ca/maps/dir//Hyatt+Regency+Toronto,+370+King+St+W,+Toronto,+ON+M5V+1J9/@43.646285,-79.391716,17z/data=!4m12!1m3!3m2!1s0x882b34da0ea12bbb:0x7b9bf41770995c2e!2sHyatt+Regency+Toronto!4m7!1m0!1m5!1m1!1s0x882b34da0ea12bbb:0x7b9bf41770995c2e!2m2!1d-79.391716!2d43.646285?hl=en">
-        <span>Get Directions</span><span>It's easy!</span>
+        <span>Get Directions</span><span>Don't get lost!</span>
       </a>
     </div>
   </div>
@@ -211,7 +228,7 @@
     <img class="row-image" data-interchange="[images/bg-accomodations2-mobile.jpg, (default)], [images/bg-accomodations2-tablet.jpg, (medium)], [images/bg-accomodations2-desktop.jpg, (large)]">
     <div class="row-content with-background text-center airbnb">
       <a class="button wide button-modal secondary desktop" target="_BLANK" href="https://www.airbnb.ca/s/toronto?checkin=27-12-2014&checkout=29-12-2014&guests=2&sw_lat=43.642299424568215&sw_lng=-79.40611476785625&ne_lat=43.65222511450421&ne_lng=-79.39465637094463&zoom=16&search_by_map=true">
-        <span>Don't like hotels? Try AirBNB</span><span>AirBNB is great!</span>
+        <span>Don't like hotels? Try AirBNB</span><span>Legal in Toronto!</span>
       </a>
     </div>
   </div>
@@ -220,8 +237,13 @@
 
 
   <div class="tip-container tip-right">
-    <div class="tooltip">Because of her never ending antics, Caroline &amp; Arvin often &quot;joke&quot; about throwing Paxil &quot;dans la poubelle&quot;.</div>
+    <div class="tooltip">Arvin &amp; Caroline are contemplating getting a rabbit as a pet because rumour has it, they can be litter trained.</div>
     <div class="cat icons-pusheen-left"></div>
+  </div>
+
+  <div class="tip-container tip-left">
+    <div class="tooltip">3 months into their blossoming relationship, Caroline fractured both her elbows and Arvin didn’t run for the hills!</div>
+    <div class="cat icons-pusheen-right"></div>
   </div>
 
   <!-- Wondering content -->
@@ -234,19 +256,19 @@
       <div class="wondering-item">
         <div class="icon present"></div>
         <h3 class="gold-dark">What about the gifts?</h3>
-        <p>Living in très cool Toronto core, we cultivate a minimalist lifestyle (you kind of have to in 800 square feet). We thought of registering but couldn't come up with anything we needed or wanted. Your presence is our gift, but were you so generous to get us something, we would kindly ask please no boxed gifts.</p>
+        <p>Living in the très cool Toronto core, we cultivate a minimalist lifestyle (you have to in 800 square feet). We thought of registering but couldn't come up with anything we needed or wanted. Your presence is our gift, but were you so generous to get us something, we would kindly ask please no boxed gifts.</p>
       </div>
       <div class="wondering-item">
         <div class="icon kids"></div>
         <h3 class="gold-dark">What about the kids?</h3>
-        <p>We recognize that a number of our friends and family who are traveling from out of town have little ones. The venue we've chosen isn't well suited for kids so we are opting for an adult only event. Please advise us in advance if this poses a problem and we will help arrange alternate plans at the wedding.</p>
+        <p>The venue we've chosen isn't ideal for kids. However we recognize that a number of our friends and family who are traveling have little ones. If you cannot make other arrangements kindly let us know and we will make sure to keep them entertained at the event.</p>
       </div>
       <div class="wondering-item wedding-party">
         <div class="icon weddingparty"></div>
         <h3 class="gold-dark">What about the wedding party?</h3>
-        <p>We decided to each choose one friend to stand by our sides on this day. Oh, and an exquisite little girl to throw some flowers!</p>
-        <p><strong>Ben Van Dongen</strong> - Best man & witness<br/> “I met Ben in grade 9 and he’s been my brother from another mother since.“ - Arvin.</p>
-        <p><strong>Justine Noiseux</strong> - Maid of honor & witness<br/> “I’ve known this beautiful girl since 1992 - She has the biggest, kindest heart of anyone I know. And she’s always made me laugh till i pee.” - Caroline</p>
+        <p>We each decided to choose one dear friend to stand by our side on this day. Oh, and an exquisite little girl to throw some flowers!</p>
+        <p><strong>Ben Van Dongen</strong> - Best man & Witness<br/> “I met Ben in grade 9 and he’s been a thorn in my side ever since.“ - Arvin.</p>
+        <p><strong>Justine Noiseux</strong> - Maid of honor & Witness<br/> "She's a Lady. Whoa whoa whoa, She's a Lady." - Caroline</p>
         <p><strong>Lou Habib</strong> - The Flower girl<br/>“Every morning, we wake up to her exquisite rendition of the classic <a href="misc/move-it-move-it.mp3" target="_BLANK">"I like to move it"</a> as our alarm clock tone. Of course she’s our flower girl” - Caroline  & Arvin</p>
       </div>
     </div>
@@ -254,11 +276,6 @@
 </div>
 <!-- /Wondering content -->
 
-
-  <div class="tip-container tip-left">
-    <div class="tooltip">Arvin &amp; Caroline are contemplating getting a rabbit as a pet because rumour has it, they can be litter trained.</div>
-    <div class="cat icons-pusheen-right"></div>
-  </div>
 
   <!-- Thingstodo content -->
 <div id="thingstodo" class="row">
@@ -291,13 +308,6 @@
             <p class="white show-for-medium-up">The mecca of the Toronto Film Festival! If you have a few hours to spare in a dark room, this place hosts the best of art house cinema. Also, they are hosting a <a href="http://www.tiff.net/exhibitions/upcoming-exhibitions/stanley-kubrick-exhibition" target="_BLANK">Stanley Kubrick</a> exhibition!</p>
           </div>
         </li>
-        <li class="slide-ago">
-          <img class="row-image" data-interchange="[images/bg-slide2-mobile.jpg, (default)], [images/bg-slide2-tablet.jpg, (medium)], [images/bg-slide2-desktop.jpg, (large)]">
-          <div class="slide-wrapper">
-            <h2 class="gold">#4 AGO (Art Gallery of Ontario)</h2>
-            <p class="white show-for-medium-up">One of Toronto’s most prestigious art galleries, hosting a number a fascinating exhibits. Always a great visit.</p>
-          </div>
-        </li>
       </ul>
     </div>
   </div>
@@ -306,7 +316,12 @@
 
 
   <div class="tip-container tip-right">
-    <div class="tooltip">3 months into their blossoming relationship, Caroline fractured both her elbows and Arvin didn’t run for the hills!</div>
+    <div class="tooltip">Caroline &amp; Arvin love ping pong (a lot) and will challenge you at the wedding.</div>
+    <div class="cat icons-pusheen-left"></div>
+  </div>
+
+  <div class="tip-container tip-left">
+    <div class="tooltip">Caroline has more photos of random animals on her phone that she does of Arvin.</div>
     <div class="cat icons-pusheen-left"></div>
   </div>
 
@@ -331,8 +346,13 @@
 
 
   <div class="tip-container tip-left">
-    <div class="tooltip">Caroline &amp; Arvin love ping pong (a lot) and will challenge you at the wedding.</div>
+    <div class="tooltip">Arvin held an intervention for Caroline&#x27;s crippling plastic bag addiction. Progress is slow but ongoing.</div>
     <div class="cat icons-pusheen-right"></div>
+  </div>
+
+  <div class="tip-container tip-right">
+    <div class="tooltip">Every time she comes back from a trip, Arvin gets Caroline flowers. A tradition that started when she returned from Miami with broken arms.</div>
+    <div class="cat icons-pusheen-left"></div>
   </div>
 
   <!-- Outro content -->
@@ -351,7 +371,19 @@
 
 </div>
 
-    <script src="js/app-dist.js"></script>
+    <!-- build:js js/app-dist.js -->
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
+<script src="bower_components/foundation/js/foundation.min.js"></script>
+<script src="bower_components/jquery-waypoints/waypoints.min.js"></script>
+<script src="bower_components/fastclick/lib/fastclick.js"></script>
+<script src="bower_components/flexslider/jquery.flexslider-min.js"></script>
+<script src="bower_components/parsleyjs/dist/parsley.js"></script>
+<script src="js/jquery.arctext.js"></script>
+<script src="bower_components/ladda/js/spin.js"></script>
+<script src="bower_components/ladda/js/ladda.js"></script>
+<script src="bower_components/ladda/js/ladda.jquery.js"></script>
+<script src="js/app.js"></script>
+<!-- endbuild -->
 <script type="text/javascript" src="//use.typekit.net/nhd4jiy.js"></script>
 <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 <script>

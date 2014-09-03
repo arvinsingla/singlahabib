@@ -43,6 +43,12 @@
     cursor: pointer;
     text-transform: uppercase;
     z-index: 1001;
+    &:after {
+      @include css-triangle(7px, $grey, top);
+      position: absolute;
+      top: 45%;
+      left: 59%;
+    }
   }
   input[type=checkbox] {
     display: none;
@@ -63,6 +69,16 @@
     position: absolute;
     top: rem-calc(20px);
     display: none;
+  }
+}
+
+@media #{$medium-only} {
+  .menu nav {
+    .show-menu {
+      &:after {
+        left: 53%;
+      }
+    }
   }
 }
 

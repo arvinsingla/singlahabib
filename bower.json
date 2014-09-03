@@ -8,5 +8,8 @@
     "skrollr": "~0.6.26",
     "jquery.inview": "~1.0.0",
     "parsleyjs": "~2.0.4"
+  },
+  "devDependencies": {
+    "ladda": "~0.9.4"
   }
 }

@@ -37,6 +37,26 @@
     z-index: 1005;
     text-indent: rem-calc(-9999px);
   }
+  #rsvp-thankyou {
+    text-align: center;
+    position: relative;
+    top: 50%;
+    margin-top: rem-calc(-40px);
+  }
+  #rsvp-error {
+    text-align: center;
+    position: relative;
+    top: 50%;
+    margin-top: rem-calc(-40px);
+  }
+}
+
+@media #{$small-only} {
+  label,
+  input,
+  button, {
+    font-size: rem-calc(14px);
+  }
 }
 
 @media #{$medium-up} {
@@ -74,7 +94,8 @@ textarea:focus {
   opacity: 0;
 }
 
-input {
+input,
+button {
   min-width: 100%;
   padding: rem-calc(16px) rem-calc(30px);
   border: 1px solid $light-light-grey;
@@ -91,12 +112,13 @@ input {
     border-color: $mint;
     z-index: 9;
   }
-  &[type="submit"] {
-    background-color: $red;
-    color: $white;
-    &:hover {
-      background-color: $cherry;
-    }
+}
+
+button {
+  background-color: $red;
+  color: $white;
+  &:hover {
+    background-color: $cherry;
   }
 }
 

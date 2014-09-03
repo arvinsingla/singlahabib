@@ -29,6 +29,8 @@
     font-family: $font-tisa;
     font-style: italic;
     font-size: rem-calc(14px);
+    text-align: center;
+    z-index: -1;
     &:after {
       top: 100%;
       left: 85%;
@@ -45,6 +47,7 @@
     }
   }
   &.tip-right {
+    top: rem-calc(300px);
     .cat {
       right: rem-calc(-125px);
       @include icons-sprite('pusheen-left');
@@ -66,6 +69,7 @@
       .tooltip {
         opacity: 1;
         @include transition-delay(0.3s);
+        z-index: 1;
       }
     }
   }
