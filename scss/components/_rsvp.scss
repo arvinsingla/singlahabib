@@ -3,9 +3,9 @@
   width: 100%;
   height: 100%;
   overflow: scroll;
-  -webkit-transform: translate3d(0, -100%, 0);
-  -webkit-backface-visibility: hidden;
-	-webkit-perspective: 1000;
+  @include translate3d(0, -100%, 0);
+  @include backface-visibility(hidden);
+  @include perspective(1000);
   background-color: $light-light-grey;
   // background-color: rgba(243, 243, 243, 0.97);
   padding: rem-calc(10px);
@@ -17,7 +17,7 @@
     line-height: rem-calc(70px);
   }
   &.open {
-    -webkit-transform: translate3d(0, 0, 0);
+    @include translate3d(0, 0, 0);
     -webkit-overflow-scrolling: touch;
   }
   // Hide certain form elements intially.
@@ -63,7 +63,7 @@
   #rsvp {
     padding: rem-calc(30px);
     &.open {
-      -webkit-transform: translate3d(0, 0, 0);
+      @include translate3d(0, 0, 0);
     }
   }
 }
@@ -72,7 +72,7 @@
   #rsvp {
     padding: rem-calc(50px);
     &.open {
-      -webkit-transform: translate3d(0, 0, 0);
+      @include translate3d(0, 0, 0);
     }
     .rsvp-close {
       right: rem-calc(50px);
@@ -88,11 +88,12 @@ textarea:focus {
   outline: 0;
 }
 
-/* Removes placeholder text in text areas when selected */
+/* Removes placeholder text in text areas when selected
 [placeholder]:focus::-webkit-input-placeholder {
   transition: opacity 0.2s ease;
   opacity: 0;
 }
+*/
 
 input,
 button {

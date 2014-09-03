@@ -1,5 +1,8 @@
 .menu.fixed {
   z-index: 1000;
+  @include backface-visibility(hidden);
+  @include perspective(1000);
+  @include translateZ(0);
 }
 
 .menu nav {

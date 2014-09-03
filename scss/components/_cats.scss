@@ -102,3 +102,21 @@
     }
   }
 }
+
+// Have the cat peek more on desktop so scrollbars don't interfere.
+@media #{$large-up} {
+  .tip-container {
+    &.tip-right {
+      &.peek {
+        .cat {
+          @include translate3d(rem-calc(-60px),0,0);
+        }
+      }
+      &.expand {
+        .cat {
+          @include transform(rotate(40deg) translate3d(-5.3125rem, 0.375rem, 0));
+        }
+      }
+    }
+  }
+}
