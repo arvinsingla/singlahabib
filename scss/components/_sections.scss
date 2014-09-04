@@ -445,6 +445,20 @@ body {
     margin: 0;
     line-height: rem-calc(70px);
   }
+  p.acknowledgements {
+    position: absolute;
+    color: $white;
+    bottom: rem-calc(20px);
+    width: 100%;
+    text-align: center;
+    line-height: 1.25rem;
+    a:link,
+    a:visited {
+      color: $gold-dark;
+      font-size: 1rem;
+      font-weight: normal;
+    }
+  }
 }
 
 @media #{$medium-up} {

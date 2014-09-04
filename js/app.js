@@ -238,8 +238,8 @@ FastClick.attach(document.body);
     });
     var myCookie = document.cookie.replace(/(?:(?:^|.*;\s*)rsvp\s*\=\s*([^;]*).*$)|^.*$/, "$1");
     if (myCookie) {
-      $('#rsvp form').hide();
-      $('#rsvp-thankyou').removeClass('hide');
+      $('#rsvp form').addClass('hide');
+      $('#rsvp-thankyou').addClass('animate-in');
     }
     // Add the loaded class when the page has fully loaded.
     $('body').addClass('loaded');
