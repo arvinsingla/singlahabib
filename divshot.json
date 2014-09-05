@@ -1,0 +1,9 @@
+{
+  "name": "singlahabib",
+  "root": "./dist",
+  "clean_urls": false,
+  "error_page": "error.html",
+  "cache_control": {
+    "/**": 5184000
+  }
+}

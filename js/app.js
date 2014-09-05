@@ -219,7 +219,7 @@ FastClick.attach(document.body);
   // Move it move it trigger.
   $('a.move-it-trigger').click(function(e) {
     e.preventDefault();
-    $('audio.move-it-player').fadeIn();
+    $('.move-it-player').fadeIn();
   });
 
   /**

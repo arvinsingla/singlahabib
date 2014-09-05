@@ -44,6 +44,7 @@ body {
     @include translateZ(0);
     @include backface-visibility(hidden);
     @include perspective(1000);
+    width: 100%;
   }
 }
 
@@ -460,6 +461,21 @@ body {
     }
   }
 }
+
+@media #{$small-only} {
+  #outro {
+    p.acknowledgements {
+      font-size: 0.5rem;
+      bottom: 0.5rem;
+      line-height: 0.75rem;
+      a:link,
+      a:visited {
+        font-size: 0.5rem;
+      }
+    }
+  }
+}
+
 
 @media #{$medium-up} {
   #outro {

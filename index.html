@@ -283,10 +283,12 @@
         <p><strong>Ben Van Dongen</strong> - Best man & Witness<br/> “I met Ben in grade 9 and he’s been a thorn in my side ever since.“ - Arvin.</p>
         <p><strong>Justine Noiseux</strong> - Maid of honor & Witness<br/> "She's a Lady. Whoa whoa whoa, She's a Lady." - Caroline</p>
         <p><strong>Lou Habib</strong> - The Flower girl<br/>“Every morning, we wake up to her exquisite rendition of the classic <a href="#" class="move-it-trigger">"I like to move it"</a> as our alarm clock tone. Of course she’s our flower girl” - Caroline  & Arvin</p>
-        <audio class="move-it-player hide" controls>
-          <source src="misc/move-it-move-it.mp3" type="audio/mpeg">
-          Your browser does not support the audio element.
-        </audio>
+        <div class="move-it-player hide">
+          <audio controls>
+            <source src="misc/move-it-move-it.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+          </audio>
+        </div>
       </div>
     </div>
   </div>
@@ -367,11 +369,6 @@
     <div class="cat icons-pusheen-right"></div>
   </div>
 
-  <div class="tip-container tip-right">
-    <div class="tooltip">Every time she comes back from a trip, Arvin gets Caroline flowers. A tradition that started when she returned from Miami with broken arms.</div>
-    <div class="cat icons-pusheen-left"></div>
-  </div>
-
   <!-- Outro content -->
 <div id="outro" class="row">
   <div class="small-12 medium-12 large-12 column">
@@ -393,7 +390,8 @@
 
     <!-- build:js js/app-dist.js -->
 <script src="bower_components/jquery/dist/jquery.min.js"></script>
-<script src="bower_components/foundation/js/foundation.min.js"></script>
+<script src="bower_components/foundation/js/foundation/foundation.js"></script>
+<script src="bower_components/foundation/js/foundation/foundation.interchange.js"></script>
 <script src="bower_components/jquery-waypoints/waypoints.min.js"></script>
 <script src="bower_components/fastclick/lib/fastclick.js"></script>
 <script src="bower_components/flexslider/jquery.flexslider-min.js"></script>
