@@ -69,5 +69,5 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-divshot');
   grunt.registerTask('default', ['assemble']);
   grunt.registerTask('dev', ['assemble', 'useminPrepare', 'usemin', 'concat', 'uglify', 'cssmin', 'copy', 'divshot:push:development']);
-  grunt.registerTask('prod', ['assemble', 'useminPrepare', 'usemin', 'concat', 'uglify', 'cssmin', 'copy', 'divshot:push:production']);
+  grunt.registerTask('prod', ['assemble', 'useminPrepare', 'usemin', 'concat', 'uglify', 'cssmin', 'copy']);
 };
