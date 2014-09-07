@@ -93,12 +93,12 @@
       top: 0;
       display: block;
       float: right;
-      width: initial;
+      width: auto;
       position: relative;
       li {
         display: inline-block;
         padding: 0 rem-calc(10px);
-        width: initial;
+        width: auto;
         background: none;
         a {
           line-height: rem-calc(75px);

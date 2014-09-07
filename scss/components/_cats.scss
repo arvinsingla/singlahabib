@@ -47,7 +47,7 @@
     }
   }
   &.tip-right {
-    top: rem-calc(300px);
+    top: rem-calc(400px);
     .cat {
       right: rem-calc(-125px);
       @include icons-sprite('pusheen-left');
@@ -74,6 +74,7 @@
     }
   }
   &.tip-left {
+    top: rem-calc(100px);
     .cat {
       @include icons-sprite('pusheen-right');
       @include resize-sprite($icons-sprites, pusheen-right, 70);

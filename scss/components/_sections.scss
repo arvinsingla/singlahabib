@@ -221,6 +221,9 @@ body {
       margin: rem-calc(40px) rem-calc(10px) 0 rem-calc(10px);
     }
   }
+  p {
+    padding: 0 rem-calc(20px);
+  }
 }
 
 @media #{$medium-up} {
@@ -311,6 +314,7 @@ body {
         a:link,
         a:visited {
           color: $red;
+          font-size: 1rem;
         }
       }
     }

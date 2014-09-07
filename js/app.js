@@ -217,9 +217,13 @@ FastClick.attach(document.body);
   }
 
   // Move it move it trigger.
+  var moveit_count = 0;
   $('a.move-it-trigger').click(function(e) {
     e.preventDefault();
-    $('.move-it-player').append('<audio controls><source src="misc/move-it-move-it.mp3" type="audio/mpeg">Your browser does not support the audio element.</audio>').fadeIn();
+    if (!moveit_count) {
+      $('.move-it-player').append('<audio controls><source src="misc/move-it-move-it.mp3" type="audio/mpeg">Your browser does not support the audio element.</audio>').fadeIn();
+      moveit_count++;
+    }
   });
 
   /**

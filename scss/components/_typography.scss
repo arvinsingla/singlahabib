@@ -13,7 +13,13 @@
 
 @font-face {
   font-family: $font-sun;
-  src: url(fonts/A_DAY_WITHOUT_SUN.otf);
+  src: url('fonts/adaywithoutsun-optimized-webfont.eot');
+  src: url('fonts/adaywithoutsun-optimized-webfont.eot?#iefix') format('embedded-opentype'),
+       url('fonts/adaywithoutsun-optimized-webfont.woff') format('woff'),
+       url('fonts/adaywithoutsun-optimized-webfont.ttf') format('truetype'),
+       url('fonts/adaywithoutsun-optimized-webfont.svg#a_day_without_sunregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
 }
 
 h1 {
