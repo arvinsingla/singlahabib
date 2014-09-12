@@ -112,7 +112,8 @@ textarea:focus {
 */
 
 input,
-button {
+button,
+textarea {
   min-width: 100%;
   padding: rem-calc(16px) rem-calc(30px);
   border: 1px solid $light-light-grey;

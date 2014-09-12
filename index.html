@@ -7,11 +7,7 @@
     <title>Caroline &amp; Arvin are getting married in Toronto!</title>
     <!--[if IE]><link rel="shortcut icon" href="images/favicon.ico"><![endif]-->
     <link rel="icon" href="images/favicon.png">
-    <!-- build:css stylesheets/app-dist.css -->
-<link rel="stylesheet" href="stylesheets/app.css" />
-<link rel="stylesheet" href="bower_components/flexslider/flexslider.css" />
-<link rel="stylesheet" href="bower_components/ladda/dist/ladda-themeless.min.css" />
-<!-- endbuild -->
+    <link rel="stylesheet" href="stylesheets/app-dist.css">
 
   </head>
   <body>
@@ -63,7 +59,7 @@
           <h3>Your details</h3>
           <input type="text" placeholder="Full Name" name="guest-name" required data-parsley-errors-messages-disabled data-parsley-group='["going", "not-going", "going-plusone"]'/>
           <input id="guest-address" class="your-details-going" type="textarea" placeholder="Full Mailing Address" name="guest-address" required data-parsley-errors-messages-disabled data-parsley-group='["going", "going-plusone"]'/>
-          <input id="guest-notes" class="your-details-going" type="textarea" placeholder="Allergies / Special considerations" name="guest-notes"/>
+          <textarea id="guest-notes" rows="3" cols="35" placeholder="Notes / Special considerations" name="guest-notes"></textarea>
           <div class="radio-group three-items form-group your-details-going" id="guest-meal">
             <input type="radio" name="guest-meal" value="beef" id="guest-meal-beef" required data-parsley-errors-messages-disabled data-parsley-group='["going", "going-plusone"]'><label for="guest-meal-beef">Beef</label>
             <input type="radio" name="guest-meal" value="fish" id="guest-meal-fish" required><label for="guest-meal-fish">Fish</label>
@@ -123,7 +119,7 @@
       <h2 class="white intro-title show-for-small-only">Caroline & Arvin</h2>
       <h3 class="white subtitle show-for-medium-up">are getting married december 28th, 2014 in Toronto</h3>
       <h4 class="white subtitle show-for-small-only">are getting married<br/>december 28th, 2014 in Toronto</h4>
-      <a href="#" class="button wide button-modal secondary" data-modal="rsvp"><span>Go ahead and RSVP here!</span><span>We promise you an awesome time!</span></a>
+      <a href="#" class="button wide button-modal secondary" data-modal="rsvp"><span>Go ahead and RSVP here!</span><span>Just do it!</span></a>
     </div>
   </div>
 </div>
@@ -212,7 +208,7 @@
   </div>
 
   <div class="tip-container tip-right">
-    <div class="tooltip">Because of her never ending antics, Caroline &amp; Arvin often &quot;joke&quot; about throwing Paxil &quot;dans la poubelle&quot;.</div>
+    <div class="tooltip">Because of her never ending antics, Caroline &amp; Arvin often &quot;joke&quot; about throwing their cat Paxil &quot;dans la poubelle&quot;.</div>
     <div class="cat icons-pusheen-left"></div>
   </div>
 
@@ -226,7 +222,7 @@
       <h2 class="gold">Hyatt Regency Toronto</h2>
       <h4 class="white">370 King St. W - <a href="tel:+14163431234" class="tel">(416) 343-1234</a></h4>
       <h5 class="white">$129/Night - 9min Walk to Ceremony</h5>
-      <p class="white">The Hyatt Regency lies in the heart of downtown Toronto and is walking<br/>distance to the ceremony/reception! Please book by November 15th, 2014 using the link below.</p>
+      <p class="white">We have a block of rooms at a preferred rate with the Hyatt Regency in downtown Toronto.<br/>Please book by November 15th using the link below.</p>
       <p class="white">Parking is available at the hotel, or at a number of lots in the area.</p>
       <a target="_BLANK" class="button button-modal" href="https://aws.passkey.com/event/11750443/owner/1460357/landing">
         <span>Book this Hotel!</span><span>What a deal!</span>
@@ -280,7 +276,7 @@
         <div class="icon weddingparty"></div>
         <h3 class="gold-dark">What about the wedding party?</h3>
         <p>We each decided to choose one dear friend to stand by our side on this day. Oh, and an exquisite little girl to throw some flowers!</p>
-        <p><strong>Ben Van Dongen</strong> - Best man & Witness<br/> “I met Ben in grade 9 and he’s been a thorn in my side ever since.“ - Arvin.</p>
+        <p><strong>Ben Van Dongen</strong> - Best man & Witness<br/> “I met Ben in grade 9 and he’s been a thorn in my side ever since.“ - Arvin</p>
         <p><strong>Justine Noiseux</strong> - Maid of honor & Witness<br/> "She's a Lady. Whoa whoa whoa, She's a Lady." - Caroline</p>
         <p><strong>Lou Habib</strong> - The Flower girl<br/>“Every morning, we wake up to her exquisite rendition of the classic <a href="#" class="move-it-trigger">"I like to move it"</a> as our alarm clock tone. Of course she’s our flower girl” - Caroline  & Arvin</p>
         <div class="move-it-player hide"></div>
@@ -374,7 +370,7 @@
       <div class="icon medium-white-div"></div>
     </div>
     <p class="acknowledgements">
-      Photos courtesy of the magnificent <a href="http://www.urgencycompany.com/" target="_BLANK">Jason Gilmore</a>.<br/>Website design and layout by <a href="https://dribbble.com/andsem" target="_BLANK">Andrew Semuschak</a> a gentleman and a scholar.
+      Photos courtesy of the magnificent <a href="http://www.urgencycompany.com/" target="_BLANK">Jason Gilmore</a>.<br/>Website design and layout by <a href="https://dribbble.com/andsem" target="_BLANK">Andrew Semuschak</a>, a gentleman and a scholar.
     </p>
   </div>
 </div>
@@ -383,20 +379,7 @@
 
 </div>
 
-    <!-- build:js js/app-dist.js -->
-<script src="bower_components/jquery/dist/jquery.min.js"></script>
-<script src="bower_components/foundation/js/foundation/foundation.js"></script>
-<script src="bower_components/foundation/js/foundation/foundation.interchange.js"></script>
-<script src="bower_components/jquery-waypoints/waypoints.min.js"></script>
-<script src="bower_components/fastclick/lib/fastclick.js"></script>
-<script src="bower_components/flexslider/jquery.flexslider-min.js"></script>
-<script src="bower_components/parsleyjs/dist/parsley.js"></script>
-<script src="js/jquery.arctext.js"></script>
-<script src="bower_components/ladda/js/spin.js"></script>
-<script src="bower_components/ladda/js/ladda.js"></script>
-<script src="bower_components/ladda/js/ladda.jquery.js"></script>
-<script src="js/app.js"></script>
-<!-- endbuild -->
+    <script src="js/app-dist.js"></script>
 <script type="text/javascript" src="//use.typekit.net/nhd4jiy.js"></script>
 <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 <script>

@@ -164,8 +164,8 @@ FastClick.attach(document.body);
       body += "Going: Yes<br/>";
       body += "Address: " + $('input[name=guest-address]', '#rsvp').val() + "<br/>";
       body += "Meal: " + $('input[name=guest-meal]:checked', '#rsvp').val() + "<br/>";
-      if ($('input[name=guest-notes]', '#rsvp').val()) {
-        body += "Notes: " + $('input[name=guest-notes]', '#rsvp').val() + "<br/>";
+      if ($('textarea[name=guest-notes]', '#rsvp').val()) {
+        body += "Notes: " + $('textarea[name=guest-notes]', '#rsvp').val() + "<br/>";
       }
       if (plusone === 'yes') {
         body += "Plus 1: Yes<br/>";
@@ -176,6 +176,9 @@ FastClick.attach(document.body);
       }
     } else {
       body += "Going: No<br/>";
+      if ($('textarea[name=guest-notes]', '#rsvp').val()) {
+        body += "Notes: " + $('textarea[name=guest-notes]', '#rsvp').val() + "<br/>";
+      }
     }
     $.ajax(
     {
