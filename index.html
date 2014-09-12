@@ -7,7 +7,11 @@
     <title>Caroline &amp; Arvin are getting married in Toronto!</title>
     <!--[if IE]><link rel="shortcut icon" href="images/favicon.ico"><![endif]-->
     <link rel="icon" href="images/favicon.png">
-    <link rel="stylesheet" href="stylesheets/app-dist.css">
+    <!-- build:css stylesheets/app-dist.css -->
+<link rel="stylesheet" href="stylesheets/app.css" />
+<link rel="stylesheet" href="bower_components/flexslider/flexslider.css" />
+<link rel="stylesheet" href="bower_components/ladda/dist/ladda-themeless.min.css" />
+<!-- endbuild -->
 
   </head>
   <body>
@@ -59,7 +63,7 @@
           <h3>Your details</h3>
           <input type="text" placeholder="Full Name" name="guest-name" required data-parsley-errors-messages-disabled data-parsley-group='["going", "not-going", "going-plusone"]'/>
           <input id="guest-address" class="your-details-going" type="textarea" placeholder="Full Mailing Address" name="guest-address" required data-parsley-errors-messages-disabled data-parsley-group='["going", "going-plusone"]'/>
-          <textarea id="guest-notes" rows="3" cols="35" placeholder="Notes / Special considerations" name="guest-notes"></textarea>
+          <textarea id="guest-notes" rows="3" placeholder="Notes / Special considerations" name="guest-notes"></textarea>
           <div class="radio-group three-items form-group your-details-going" id="guest-meal">
             <input type="radio" name="guest-meal" value="beef" id="guest-meal-beef" required data-parsley-errors-messages-disabled data-parsley-group='["going", "going-plusone"]'><label for="guest-meal-beef">Beef</label>
             <input type="radio" name="guest-meal" value="fish" id="guest-meal-fish" required><label for="guest-meal-fish">Fish</label>
@@ -379,7 +383,20 @@
 
 </div>
 
-    <script src="js/app-dist.js"></script>
+    <!-- build:js js/app-dist.js -->
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
+<script src="bower_components/foundation/js/foundation/foundation.js"></script>
+<script src="bower_components/foundation/js/foundation/foundation.interchange.js"></script>
+<script src="bower_components/jquery-waypoints/waypoints.min.js"></script>
+<script src="bower_components/fastclick/lib/fastclick.js"></script>
+<script src="bower_components/flexslider/jquery.flexslider-min.js"></script>
+<script src="bower_components/parsleyjs/dist/parsley.js"></script>
+<script src="js/jquery.arctext.js"></script>
+<script src="bower_components/ladda/js/spin.js"></script>
+<script src="bower_components/ladda/js/ladda.js"></script>
+<script src="bower_components/ladda/js/ladda.jquery.js"></script>
+<script src="js/app.js"></script>
+<!-- endbuild -->
 <script type="text/javascript" src="//use.typekit.net/nhd4jiy.js"></script>
 <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 <script>
