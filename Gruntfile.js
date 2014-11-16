@@ -46,17 +46,6 @@ module.exports = function(grunt) {
           { expand: true, cwd: 'bower_components/flexslider/', src: ['fonts/**'], dest: 'dist/stylesheets/',  filter: 'isFile' }
         ]
       }
-    },
-    'divshot:push': {
-      production: {
-        // options
-      },
-      staging: {
-        // options
-      },
-      development: {
-        // options
-      }
     }
   });
 
@@ -66,8 +55,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
-  grunt.loadNpmTasks('grunt-divshot');
   grunt.registerTask('default', ['assemble']);
-  grunt.registerTask('dev', ['assemble', 'useminPrepare', 'usemin', 'concat', 'uglify', 'cssmin', 'copy', 'divshot:push:development']);
+  grunt.registerTask('dev', ['assemble', 'useminPrepare', 'usemin', 'concat', 'uglify', 'cssmin', 'copy']);
   grunt.registerTask('prod', ['assemble', 'useminPrepare', 'usemin', 'concat', 'uglify', 'cssmin', 'copy']);
 };

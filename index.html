@@ -7,11 +7,7 @@
     <title>Caroline &amp; Arvin are getting married in Toronto!</title>
     <!--[if IE]><link rel="shortcut icon" href="images/favicon.ico"><![endif]-->
     <link rel="icon" href="images/favicon.png">
-    <!-- build:css stylesheets/app-dist.css -->
-<link rel="stylesheet" href="stylesheets/app.css" />
-<link rel="stylesheet" href="bower_components/flexslider/flexslider.css" />
-<link rel="stylesheet" href="bower_components/ladda/dist/ladda-themeless.min.css" />
-<!-- endbuild -->
+    <link rel="stylesheet" href="stylesheets/app-dist.css">
 
   </head>
   <body>
@@ -36,6 +32,11 @@
 
   <a href="#" class="rsvp-close icon close">Close</a>
 
+  <div id="rsvp-over">
+      <h3>RSVP for the wedding is closed.</h3>
+  </div>
+
+  <!--
   <div id="rsvp-thankyou">
     <div class="icon checkmark"></div>
     <h3>Thank you for RSVPing</h3>
@@ -87,6 +88,8 @@
       </form>
     </div>
   </div>
+  -->
+
 </div>
 <!-- /RSVP form -->
 
@@ -117,7 +120,7 @@
   <!-- Intro content -->
 <div id="intro" class="row">
   <div class="small-12 medium-12 large-12 column">
-    <img class="row-image" data-interchange="[images/bg-intro2-mobile.jpg, (default)], [images/bg-intro2-tablet.jpg, (medium)], [images/bg-intro2-desktop.jpg, (large)]">
+    <img class="row-image" data-interchange="[images/bg-intro2-mobile.jpg, (default)], [images/bg-intro1-tablet.jpg, (medium)], [images/bg-intro1-desktop.jpg, (large)]">
     <div class="row-content with-background text-center">
       <h1 class="white intro-title show-for-medium-up">Caroline Habib & Arvin Singla</h1>
       <h2 class="white intro-title show-for-small-only">Caroline & Arvin</h2>
@@ -383,20 +386,7 @@
 
 </div>
 
-    <!-- build:js js/app-dist.js -->
-<script src="bower_components/jquery/dist/jquery.min.js"></script>
-<script src="bower_components/foundation/js/foundation/foundation.js"></script>
-<script src="bower_components/foundation/js/foundation/foundation.interchange.js"></script>
-<script src="bower_components/jquery-waypoints/waypoints.min.js"></script>
-<script src="bower_components/fastclick/lib/fastclick.js"></script>
-<script src="bower_components/flexslider/jquery.flexslider-min.js"></script>
-<script src="bower_components/parsleyjs/dist/parsley.js"></script>
-<script src="js/jquery.arctext.js"></script>
-<script src="bower_components/ladda/js/spin.js"></script>
-<script src="bower_components/ladda/js/ladda.js"></script>
-<script src="bower_components/ladda/js/ladda.jquery.js"></script>
-<script src="js/app.js"></script>
-<!-- endbuild -->
+    <script src="js/app-dist.js"></script>
 <script type="text/javascript" src="//use.typekit.net/nhd4jiy.js"></script>
 <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 <script>

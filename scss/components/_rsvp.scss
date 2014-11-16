@@ -65,6 +65,15 @@
       top: 45%;
     }
   }
+  #rsvp-over {
+    text-align: center;
+    position: absolute;
+    top: 45%;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 @media #{$small-only} {

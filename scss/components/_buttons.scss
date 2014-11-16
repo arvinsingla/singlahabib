@@ -12,7 +12,7 @@
   font-size: rem-calc(14px);
   font-weight: normal;
   letter-spacing: rem-calc(2px);
-  @include user-select(none);
+  /* @include user-select(none); */
   @include border-radius($button-radius);
   &:hover {
     background: $cherry;
