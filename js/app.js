@@ -46,6 +46,8 @@ FastClick.attach(document.body);
    * Handle top menu click scrolling
    */
   $('nav a[href!="#"]').click(function(e) {
+    console.log(e);
+    console.log(this);
     // On mobile, uncheck the checkbox to hide the mobile menu.
     $('input#show-menu').attr('checked', false);
     // Get the name of the element we are looking for

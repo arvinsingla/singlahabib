@@ -494,9 +494,19 @@ body {
  */
 #table {
    padding: rem-calc(20px);
+   .char10 {
+     color: $red;
+   }
+   h2 {
+     margin: 0 0 rem-calc(20px) 0;
+   }
+   h4 {
+     margin: rem-calc(10px) 0 0 0;
+   }
    input {
      margin: rem-calc(15px) 0;
      padding: rem-calc(8px) rem-calc(30px);
+     border-color: $light-grey;
    }
    table {
      width: 100%;
@@ -519,7 +529,7 @@ body {
      padding-left: 10%;
      text-align: left;
    }
-   tbody tr:nth-child(odd) {
+   tbody tr:nth-of-type(2n+1) {
      background-color: $light-light-grey;
      @include border-radius($button-radius);
    }
@@ -527,12 +537,24 @@ body {
 
 @media #{$medium} {
   #table {
-    padding: rem-calc(20px) 32%;
+    padding: rem-calc(20px) 25%;
+    h2 {
+      margin: rem-calc(20px) 0 rem-calc(40px) 0;
+    }
+    h4 {
+      margin: rem-calc(10px) 0 0 0;
+    }
   }
 }
 
 @media #{$large-up} {
   #table {
     padding: rem-calc(20px) 35%;
+    h2 {
+      margin: rem-calc(20px) 0 rem-calc(40px) 0;
+    }
+    h4 {
+      margin: rem-calc(10px) 0 0 0;
+    }
   }
 }
