@@ -67,4 +67,8 @@
     @include icons-sprite(icon-close);
     @include resize-sprite($icons-sprites, icon-close, 50);
   }
+  &.table {
+    @include icons-sprite(icon-table-logo);
+    @include resize-sprite($icons-sprites, icon-table-logo, 50);
+  }
 }

@@ -1,0 +1,26 @@
+<!-- Table content -->
+<div id="table" class="row">
+
+  <div class="small-12 medium-12 large-12 column">
+    <div class="row-content text-center">
+      <div class="icon table"></div>
+      <input type="text" id="search-text" placeholder="Filter...">
+      <table id="table-search">
+        <thead>
+          <tr>
+            <th class="table-name">Name</th>
+            <th>Table #</th>
+          </tr>
+        </thead>
+        <tbody id="table-items">
+          {{#each table}}
+            <tr>
+              <td class="table-name">{{name}}</td>
+              <td class="table-number">{{table}}</td>
+            </tr>
+          {{/each}}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

@@ -229,6 +229,41 @@ FastClick.attach(document.body);
     }
   });
 
+  // Perform table sorting
+  $("#search-text").keyup(function () {
+
+    $.extend($.expr[':'], {
+      'containsi': function(elem, i, match, array) {
+        return (elem.textContent || elem.innerText || '').toLowerCase()
+        .indexOf((match[3] || "").toLowerCase()) >= 0;
+      }
+    });
+
+    //split the current value of searchInput
+    var data = this.value.split(" ");
+    //create a jquery object of the rows
+    var jo = $("#table-items").find("tr");
+    if (this.value == "") {
+        jo.show();
+        return;
+    }
+    //hide all the rows
+    jo.hide();
+
+    //Recusively filter the jquery object to get results.
+    jo.filter(function (i, v) {
+        var $t = $(this);
+        for (var d = 0; d < data.length; ++d) {
+            if ($t.is(":containsi('" + data[d] + "')")) {
+                return true;
+            }
+        }
+        return false;
+    })
+    //show the rows that match.
+    .show();
+  })
+
   /**
    * Page Loading Events
    */

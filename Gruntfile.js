@@ -17,13 +17,13 @@ module.exports = function(grunt) {
       }
     },
     useminPrepare: {
-      html: './index.html',
+      src: ['./index.html', './table.html'],
       options: {
         dest: './dist'
       }
     },
     usemin: {
-      html: './index.html',
+      html: ['./index.html', './table.html'],
     },
     compress: {
       main: {
@@ -40,6 +40,7 @@ module.exports = function(grunt) {
       main: {
         files: [
           { expand: true, src: ['index.html'], dest: 'dist/', filter: 'isFile' },
+          { expand: true, src: ['table.html'], dest: 'dist/', filter: 'isFile' },
           { expand: true, src: ['images/*'], dest: 'dist/', filter: 'isFile' },
           { expand: true, src: ['misc/*'], dest: 'dist/',  filter: 'isFile' },
           { expand: true, src: ['fonts/*'], dest: 'dist/stylesheets/',  filter: 'isFile' },
@@ -56,6 +57,6 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.registerTask('default', ['assemble']);
-  grunt.registerTask('dev', ['assemble', 'useminPrepare', 'usemin', 'concat', 'uglify', 'cssmin', 'copy']);
+  grunt.registerTask('dev', ['assemble']);
   grunt.registerTask('prod', ['assemble', 'useminPrepare', 'usemin', 'concat', 'uglify', 'cssmin', 'copy']);
 };
