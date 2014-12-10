@@ -4,7 +4,7 @@
   <div class="small-12 medium-12 large-12 column">
     <div class="row-content text-center">
       <div class="icon table"></div>
-      <input type="text" id="search-text" placeholder="Filter...">
+      <input type="text" id="search-text" placeholder="Type your name to find your table...">
       <table id="table-search">
         <thead>
           <tr>
@@ -13,12 +13,12 @@
           </tr>
         </thead>
         <tbody id="table-items">
-          {{#each table}}
+          {{#eachByName table}}
             <tr>
               <td class="table-name">{{name}}</td>
               <td class="table-number">{{table}}</td>
             </tr>
-          {{/each}}
+          {{/eachByName}}
         </tbody>
       </table>
     </div>

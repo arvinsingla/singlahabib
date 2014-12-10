@@ -9,7 +9,8 @@ module.exports = function(grunt) {
         assets: 'dist/assets',
         partials: ['templates/includes/*.hbs'],
         layout: 'templates/layouts/default.hbs',
-        data: ['templates/data/*.{json,yml}']
+        data: ['templates/data/*.{json,yml}'],
+        helpers: ['./helpers/eachbyname.js']
       },
       site: {
         src: 'templates/pages/*.hbs',
