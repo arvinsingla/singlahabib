@@ -46,8 +46,6 @@ FastClick.attach(document.body);
    * Handle top menu click scrolling
    */
   $('nav a[href!="#"]').click(function(e) {
-    console.log(e);
-    console.log(this);
     // On mobile, uncheck the checkbox to hide the mobile menu.
     $('input#show-menu').attr('checked', false);
     // Get the name of the element we are looking for
@@ -230,7 +228,12 @@ FastClick.attach(document.body);
   });
 
   // Perform table sorting
-  $("#search-text").keyup(function () {
+  $("#search-text").keyup(function (e) {
+
+    // un-focus the textfield if the return key is pressed.
+    if (e.which == 13) {
+      this.blur();
+    }
 
     $.extend($.expr[':'], {
       'containsi': function(elem, i, match, array) {
