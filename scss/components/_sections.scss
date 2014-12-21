@@ -493,46 +493,52 @@ body {
  * Tables filter Page
  */
 #table {
-   padding: rem-calc(20px);
-   .char10 {
-     color: $red;
-   }
-   h2 {
-     margin: 0 0 rem-calc(20px) 0;
-   }
-   h4 {
-     margin: rem-calc(10px) 0 0 0;
-   }
-   input {
-     margin: rem-calc(15px) 0;
-     padding: rem-calc(8px) rem-calc(30px);
-     border-color: $light-grey;
-   }
-   table {
-     width: 100%;
-     border-collapse: separate;
-   }
-   thead {
-     font-family: $font-tisa;
-   }
-   tr {
-     padding: rem-calc(5px);
-   }
-   td {
-     padding: rem-calc(5px);
-   }
-   th {
-     padding: rem-calc(5px);
-   }
-   td.table-name,
-   th.table-name {
-     padding-left: 10%;
-     text-align: left;
-   }
-   tbody tr:nth-of-type(2n+1) {
-     background-color: $light-light-grey;
-     @include border-radius($button-radius);
-   }
+  padding: rem-calc(20px);
+  .char10 {
+    color: $red;
+  }
+  h2 {
+    margin: 0 0 rem-calc(20px) 0;
+  }
+  h4 {
+    margin: rem-calc(10px) 0 0 0;
+  }
+  input {
+    margin: rem-calc(15px) 0;
+    padding: rem-calc(8px) rem-calc(30px);
+    border-color: $light-grey;
+  }
+  table {
+    width: 100%;
+    border-collapse: separate;
+  }
+  thead {
+    font-family: $font-tisa;
+  }
+  tr {
+    padding: rem-calc(5px);
+  }
+  td {
+    padding: rem-calc(5px);
+  }
+  th {
+    padding: rem-calc(5px);
+  }
+  td.table-name,
+  th.table-name {
+    padding-left: 10%;
+    text-align: left;
+  }
+  tbody {
+    tr:nth-of-type(2n+1) {
+      background-color: $light-light-grey;
+    }
+    tr {
+      color: $charcoal;
+      font-family: $font-tisa;
+      line-height: 1.85rem;
+    }
+  }
 }
 
 @media #{$medium} {
