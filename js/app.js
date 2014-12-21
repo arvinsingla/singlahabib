@@ -257,7 +257,7 @@ FastClick.attach(document.body);
     jo.filter(function (i, v) {
          var $t = $(this);
          for (var d = 0; d < data.length; ++d) {
-             if(data[d]===""){
+             if (data[d] === ""){
                  continue;
              }
              if ($.isNumeric(data[d])) {
