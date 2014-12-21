@@ -255,17 +255,25 @@ FastClick.attach(document.body);
 
     //Recusively filter the jquery object to get results.
     jo.filter(function (i, v) {
-        var $t = $(this);
-        for (var d = 0; d < data.length; ++d) {
-            if ($t.is(":containsi('" + data[d] + "')")) {
-                return true;
-            }
-        }
-        return false;
-    })
-    //show the rows that match.
-    .show();
-  })
+         var $t = $(this);
+         for (var d = 0; d < data.length; ++d) {
+             if(data[d]===""){
+                 continue;
+             }
+             if ($.isNumeric(data[d])) {
+                 if ($t.children('.table-number').first().text() === data[d]) {
+                     return true;
+                 }
+             }
+             else if ($t.is(":containsi('" + data[d] + "')")) {
+                 return true;
+             }
+         }
+         return false;
+     })
+     //show the rows that match.
+     .show();
+  });
 
   /**
    * Page Loading Events
